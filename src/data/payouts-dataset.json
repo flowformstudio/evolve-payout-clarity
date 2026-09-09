@@ -1,0 +1,1856 @@
+{
+  "meta": {
+    "description": "Synthetic dataset for Senior Design Engineer take-home exercise. All data is fictional \u2014 names, contact info, IDs, and listing are not real.",
+    "generatedOn": "2026-05-17",
+    "todayForExercise": "2026-05-17",
+    "currencyCode": "USD",
+    "currencySymbol": "$"
+  },
+  "owner": {
+    "id": "owner_001",
+    "displayName": "Jordan Avery",
+    "email": "jordan.avery@example.com",
+    "bankAccount": {
+      "institution": "Lakeshore Federal Credit Union",
+      "lastFour": "4218"
+    },
+    "plan": "Plus",
+    "planDescription": "Plus tier \u2014 15% management fee on base rate; cleaning fee passes through to owner."
+  },
+  "listing": {
+    "id": "547552",
+    "name": "South Congress Loft",
+    "city": "Austin",
+    "state": "TX",
+    "country": "US",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "sleeps": 4,
+    "managementFeeRate": 0.15,
+    "cleaningFee": 140.0
+  },
+  "taxes": [
+    {
+      "name": "Texas State Hotel Occupancy Tax",
+      "rate": 0.06,
+      "appliesTo": "base + cleaning"
+    },
+    {
+      "name": "City of Austin Hotel Occupancy Tax",
+      "rate": 0.09,
+      "appliesTo": "base + cleaning"
+    },
+    {
+      "name": "Travis County Venue Project Tax",
+      "rate": 0.02,
+      "appliesTo": "base + cleaning"
+    }
+  ],
+  "payoutTimingNote": "Payouts typically appear in the owner's bank account 5\u20139 business days after a guest checks in. Transaction is processed ~2 business days after check-in.",
+  "bookings": [
+    {
+      "id": "a0APl00000LT0TPBMAB",
+      "status": "blocked",
+      "bookingSite": null,
+      "guest": null,
+      "stay": {
+        "checkIn": "2025-11-21",
+        "checkOut": "2025-11-22",
+        "nights": 1,
+        "adults": null,
+        "children": null,
+        "infants": null,
+        "pets": null
+      },
+      "dateBooked": "2025-11-21",
+      "lineItems": [],
+      "payout": null,
+      "returningGuest": false
+    },
+    {
+      "id": "a0APl000005YB33UMAB",
+      "status": "blocked",
+      "bookingSite": null,
+      "guest": null,
+      "stay": {
+        "checkIn": "2025-11-22",
+        "checkOut": "2025-11-25",
+        "nights": 3,
+        "adults": null,
+        "children": null,
+        "infants": null,
+        "pets": null
+      },
+      "dateBooked": "2025-11-22",
+      "lineItems": [],
+      "payout": null,
+      "returningGuest": false
+    },
+    {
+      "id": "15659176",
+      "status": "checked_out",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Brett Cosgrove",
+        "email": null,
+        "phone": "+1 555-982-6925"
+      },
+      "stay": {
+        "checkIn": "2025-11-25",
+        "checkOut": "2025-11-30",
+        "nights": 5,
+        "adults": 3,
+        "children": 0,
+        "infants": 1,
+        "pets": false
+      },
+      "dateBooked": "2025-11-11",
+      "lineItems": [
+        {
+          "description": "Rate for 5 Nights",
+          "amount": 526.42,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 39.99,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 59.98,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 13.33,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 587.46,
+        "managementFee": 78.96,
+        "status": "paid",
+        "expectedDepositDate": "2025-11-27",
+        "depositedDate": "2025-11-27"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "15874628",
+      "status": "checked_out",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Yuki Tanabe",
+        "email": null,
+        "phone": null
+      },
+      "stay": {
+        "checkIn": "2025-12-01",
+        "checkOut": "2025-12-08",
+        "nights": 7,
+        "adults": 3,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2025-10-29",
+      "lineItems": [
+        {
+          "description": "Rate for 7 Nights",
+          "amount": 909.15,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 62.95,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 94.42,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 20.98,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 912.78,
+        "managementFee": 136.37,
+        "status": "paid",
+        "expectedDepositDate": "2025-12-03",
+        "depositedDate": "2025-12-03"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "H31931511",
+      "status": "checked_out",
+      "bookingSite": "VRBO",
+      "guest": {
+        "name": "Samira Bukhari",
+        "email": "s.bukhari88@gmail.com",
+        "phone": "+1 555-573-7216"
+      },
+      "stay": {
+        "checkIn": "2025-12-20",
+        "checkOut": "2025-12-26",
+        "nights": 6,
+        "adults": 2,
+        "children": 0,
+        "infants": 1,
+        "pets": false
+      },
+      "dateBooked": "2025-10-30",
+      "lineItems": [
+        {
+          "description": "Rate for 6 Nights",
+          "amount": 726.04,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 51.96,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 77.94,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 17.32,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 757.13,
+        "managementFee": 108.91,
+        "status": "paid",
+        "expectedDepositDate": "2025-12-23",
+        "depositedDate": "2025-12-23"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "Z52235350",
+      "status": "checked_out",
+      "bookingSite": "VRBO",
+      "guest": {
+        "name": "Tess Lavigne",
+        "email": "tlavigne.atx@gmail.com",
+        "phone": "+1 555-317-9179"
+      },
+      "stay": {
+        "checkIn": "2025-12-26",
+        "checkOut": "2026-01-02",
+        "nights": 7,
+        "adults": 3,
+        "children": 0,
+        "infants": 1,
+        "pets": false
+      },
+      "dateBooked": "2025-11-17",
+      "lineItems": [
+        {
+          "description": "Rate for 7 Nights",
+          "amount": 856.07,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 59.76,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 89.65,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 19.92,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 867.66,
+        "managementFee": 128.41,
+        "status": "paid",
+        "expectedDepositDate": "2025-12-30",
+        "depositedDate": "2025-12-30"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "J88461803",
+      "status": "checked_out",
+      "bookingSite": "VRBO",
+      "guest": {
+        "name": "Imani Williamson",
+        "email": null,
+        "phone": "+1 555-697-7543"
+      },
+      "stay": {
+        "checkIn": "2026-01-26",
+        "checkOut": "2026-02-01",
+        "nights": 6,
+        "adults": 3,
+        "children": 2,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-01-11",
+      "lineItems": [
+        {
+          "description": "Rate for 6 Nights",
+          "amount": 551.58,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 41.49,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 62.24,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 13.83,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 608.84,
+        "managementFee": 82.74,
+        "status": "paid",
+        "expectedDepositDate": "2026-01-28",
+        "depositedDate": "2026-01-28"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "P90048665",
+      "status": "checked_out",
+      "bookingSite": "VRBO",
+      "guest": {
+        "name": "Carmen Delacroix",
+        "email": null,
+        "phone": null
+      },
+      "stay": {
+        "checkIn": "2026-02-13",
+        "checkOut": "2026-02-15",
+        "nights": 2,
+        "adults": 2,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-01-21",
+      "lineItems": [
+        {
+          "description": "Rate for 2 Nights",
+          "amount": 221.94,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 21.72,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 32.57,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 7.24,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 328.65,
+        "managementFee": 33.29,
+        "status": "paid",
+        "expectedDepositDate": "2026-02-17",
+        "depositedDate": "2026-02-17"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "D82070937",
+      "status": "checked_out",
+      "bookingSite": "VRBO",
+      "guest": {
+        "name": "Wesley Bramble",
+        "email": "wbramble@yahoo.com",
+        "phone": "+1 555-868-5371"
+      },
+      "stay": {
+        "checkIn": "2026-02-20",
+        "checkOut": "2026-02-23",
+        "nights": 3,
+        "adults": 2,
+        "children": 2,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2025-11-20",
+      "lineItems": [
+        {
+          "description": "Rate for 3 Nights",
+          "amount": 318.53,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 27.51,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 41.27,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 9.17,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 410.75,
+        "managementFee": 47.78,
+        "status": "paid",
+        "expectedDepositDate": "2026-02-24",
+        "depositedDate": "2026-02-24"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "D93926371",
+      "status": "checked_out",
+      "bookingSite": "VRBO",
+      "guest": {
+        "name": "Eleanor Frye",
+        "email": "ellie.frye@gmail.com",
+        "phone": "+1 555-405-9317"
+      },
+      "stay": {
+        "checkIn": "2026-02-23",
+        "checkOut": "2026-03-02",
+        "nights": 7,
+        "adults": 1,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2025-12-13",
+      "lineItems": [
+        {
+          "description": "Rate for 7 Nights",
+          "amount": 730.32,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 52.22,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 78.33,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 17.41,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 760.77,
+        "managementFee": 109.55,
+        "status": "paid",
+        "expectedDepositDate": "2026-02-25",
+        "depositedDate": "2026-02-25"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "15000599",
+      "status": "checked_out",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Diego Salcedo",
+        "email": null,
+        "phone": "+1 555-600-1319"
+      },
+      "stay": {
+        "checkIn": "2026-03-05",
+        "checkOut": "2026-03-09",
+        "nights": 4,
+        "adults": 2,
+        "children": 1,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2025-12-20",
+      "lineItems": [
+        {
+          "description": "Rate for 4 Nights",
+          "amount": 711.96,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 51.12,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 76.68,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 17.04,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 745.17,
+        "managementFee": 106.79,
+        "status": "paid",
+        "expectedDepositDate": "2026-03-09",
+        "depositedDate": "2026-03-09"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "a0APl000003CZT88MAB",
+      "status": "blocked",
+      "bookingSite": null,
+      "guest": null,
+      "stay": {
+        "checkIn": "2026-03-09",
+        "checkOut": "2026-03-10",
+        "nights": 1,
+        "adults": null,
+        "children": null,
+        "infants": null,
+        "pets": null
+      },
+      "dateBooked": "2026-03-09",
+      "lineItems": [],
+      "payout": null,
+      "returningGuest": false
+    },
+    {
+      "id": "a0APl00000K2QTZJMAB",
+      "status": "blocked",
+      "bookingSite": null,
+      "guest": null,
+      "stay": {
+        "checkIn": "2026-03-11",
+        "checkOut": "2026-03-12",
+        "nights": 1,
+        "adults": null,
+        "children": null,
+        "infants": null,
+        "pets": null
+      },
+      "dateBooked": "2026-03-11",
+      "lineItems": [],
+      "payout": null,
+      "returningGuest": false
+    },
+    {
+      "id": "15222086",
+      "status": "checked_out",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Cecelia Halloran",
+        "email": "cece.halloran@gmail.com",
+        "phone": "+1 555-652-4295"
+      },
+      "stay": {
+        "checkIn": "2026-03-12",
+        "checkOut": "2026-03-15",
+        "nights": 3,
+        "adults": 2,
+        "children": 2,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-01-23",
+      "lineItems": [
+        {
+          "description": "Rate for 3 Nights",
+          "amount": 498.6,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 38.32,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 57.47,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 12.77,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 563.81,
+        "managementFee": 74.79,
+        "status": "paid",
+        "expectedDepositDate": "2026-03-16",
+        "depositedDate": "2026-03-16"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "C55377076",
+      "status": "checked_out",
+      "bookingSite": "VRBO",
+      "guest": {
+        "name": "Mason Kirkpatrick",
+        "email": null,
+        "phone": null
+      },
+      "stay": {
+        "checkIn": "2026-03-15",
+        "checkOut": "2026-03-22",
+        "nights": 7,
+        "adults": 2,
+        "children": 1,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-02-02",
+      "lineItems": [
+        {
+          "description": "Rate for 7 Nights",
+          "amount": 1325.36,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 87.92,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 131.88,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 29.31,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 1266.56,
+        "managementFee": 198.8,
+        "status": "paid",
+        "expectedDepositDate": "2026-03-17",
+        "depositedDate": "2026-03-17"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "15949401",
+      "status": "checked_out",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Holden Rasmussen",
+        "email": null,
+        "phone": null
+      },
+      "stay": {
+        "checkIn": "2026-03-22",
+        "checkOut": "2026-03-28",
+        "nights": 6,
+        "adults": 2,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-01-28",
+      "lineItems": [
+        {
+          "description": "Rate for 6 Nights",
+          "amount": 979.42,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 67.17,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 100.75,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 22.39,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 972.51,
+        "managementFee": 146.91,
+        "status": "paid",
+        "expectedDepositDate": "2026-03-24",
+        "depositedDate": "2026-03-24"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "Z87337818",
+      "status": "canceled",
+      "bookingSite": "VRBO",
+      "guest": {
+        "name": "Booker Mathis",
+        "email": null,
+        "phone": "+1 555-903-8749"
+      },
+      "stay": {
+        "checkIn": "2026-03-26",
+        "checkOut": "2026-03-28",
+        "nights": 2,
+        "adults": 1,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-02-26",
+      "lineItems": [
+        {
+          "description": "Rate for 2 Nights",
+          "amount": 364.15,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 30.25,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 45.37,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 10.08,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 0.0,
+        "managementFee": 0.0,
+        "status": "canceled",
+        "expectedDepositDate": "2026-03-30",
+        "depositedDate": null
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "15905798",
+      "status": "checked_out",
+      "bookingSite": "Evolve",
+      "guest": {
+        "name": "Curtis Vandermeer",
+        "email": null,
+        "phone": "+1 555-789-2612"
+      },
+      "stay": {
+        "checkIn": "2026-03-28",
+        "checkOut": "2026-03-30",
+        "nights": 2,
+        "adults": 2,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-02-24",
+      "lineItems": [
+        {
+          "description": "Rate for 2 Nights",
+          "amount": 363.52,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 30.21,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 45.32,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 10.07,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 448.99,
+        "managementFee": 54.53,
+        "status": "paid",
+        "expectedDepositDate": "2026-03-31",
+        "depositedDate": "2026-03-31"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "a0APl000002QT36JMAB",
+      "status": "blocked",
+      "bookingSite": null,
+      "guest": null,
+      "stay": {
+        "checkIn": "2026-03-30",
+        "checkOut": "2026-03-31",
+        "nights": 1,
+        "adults": null,
+        "children": null,
+        "infants": null,
+        "pets": null
+      },
+      "dateBooked": "2026-03-30",
+      "lineItems": [],
+      "payout": null,
+      "returningGuest": false
+    },
+    {
+      "id": "15566847",
+      "status": "checked_out",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Marcus Olufemi",
+        "email": null,
+        "phone": "+1 555-195-4872"
+      },
+      "stay": {
+        "checkIn": "2026-04-08",
+        "checkOut": "2026-04-11",
+        "nights": 3,
+        "adults": 2,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-04-08",
+      "lineItems": [
+        {
+          "description": "Rate for 3 Nights",
+          "amount": 406.33,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 32.78,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 49.17,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 10.93,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 485.38,
+        "managementFee": 60.95,
+        "status": "paid",
+        "expectedDepositDate": "2026-04-10",
+        "depositedDate": "2026-04-10"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "15397382",
+      "status": "checked_out",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Priya Nair",
+        "email": "priya.nair11@gmail.com",
+        "phone": "+1 555-102-7396"
+      },
+      "stay": {
+        "checkIn": "2026-04-15",
+        "checkOut": "2026-04-21",
+        "nights": 6,
+        "adults": 2,
+        "children": 2,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-03-07",
+      "lineItems": [
+        {
+          "description": "Rate for 6 Nights",
+          "amount": 776.36,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 54.98,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 82.47,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 18.33,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 799.91,
+        "managementFee": 116.45,
+        "status": "paid",
+        "expectedDepositDate": "2026-04-17",
+        "depositedDate": "2026-04-17"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "a0APl000009SFEYZMAB",
+      "status": "blocked",
+      "bookingSite": null,
+      "guest": null,
+      "stay": {
+        "checkIn": "2026-04-22",
+        "checkOut": "2026-04-23",
+        "nights": 1,
+        "adults": null,
+        "children": null,
+        "infants": null,
+        "pets": null
+      },
+      "dateBooked": "2026-04-22",
+      "lineItems": [],
+      "payout": null,
+      "returningGuest": false
+    },
+    {
+      "id": "15052578",
+      "status": "checked_out",
+      "bookingSite": "Hopper",
+      "guest": {
+        "name": "Pavel Doroshenko",
+        "email": null,
+        "phone": "+1 555-614-9701"
+      },
+      "stay": {
+        "checkIn": "2026-04-23",
+        "checkOut": "2026-04-28",
+        "nights": 5,
+        "adults": 2,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-04-11",
+      "lineItems": [
+        {
+          "description": "Rate for 5 Nights",
+          "amount": 647.45,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 47.25,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 70.87,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 15.75,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 690.33,
+        "managementFee": 97.12,
+        "status": "paid",
+        "expectedDepositDate": "2026-04-27",
+        "depositedDate": "2026-04-27"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "15597347",
+      "status": "checked_out",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Jonas Whittaker",
+        "email": "jwhittaker.travels@gmail.com",
+        "phone": "+1 555-352-1651"
+      },
+      "stay": {
+        "checkIn": "2026-05-01",
+        "checkOut": "2026-05-05",
+        "nights": 4,
+        "adults": 1,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-05-01",
+      "lineItems": [
+        {
+          "description": "Rate for 4 Nights",
+          "amount": 484.81,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 37.49,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 56.23,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 12.5,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 552.09,
+        "managementFee": 72.72,
+        "status": "paid",
+        "expectedDepositDate": "2026-05-05",
+        "depositedDate": "2026-05-05"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "15415011",
+      "status": "checked_out",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Tobias Ackerman",
+        "email": null,
+        "phone": null
+      },
+      "stay": {
+        "checkIn": "2026-05-06",
+        "checkOut": "2026-05-13",
+        "nights": 7,
+        "adults": 2,
+        "children": 1,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-03-08",
+      "lineItems": [
+        {
+          "description": "Rate for 7 Nights",
+          "amount": 870.66,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 60.64,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 90.96,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 20.21,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 880.06,
+        "managementFee": 130.6,
+        "status": "paid",
+        "expectedDepositDate": "2026-05-08",
+        "depositedDate": "2026-05-08"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "a0APl00000MFXX0MMAB",
+      "status": "blocked",
+      "bookingSite": null,
+      "guest": null,
+      "stay": {
+        "checkIn": "2026-05-13",
+        "checkOut": "2026-05-14",
+        "nights": 1,
+        "adults": null,
+        "children": null,
+        "infants": null,
+        "pets": null
+      },
+      "dateBooked": "2026-05-13",
+      "lineItems": [],
+      "payout": null,
+      "returningGuest": false
+    },
+    {
+      "id": "15165409",
+      "status": "checked_out",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Reza Farahani",
+        "email": null,
+        "phone": "+1 555-656-5956"
+      },
+      "stay": {
+        "checkIn": "2026-05-14",
+        "checkOut": "2026-05-16",
+        "nights": 2,
+        "adults": 1,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-02-28",
+      "lineItems": [
+        {
+          "description": "Rate for 2 Nights",
+          "amount": 251.61,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 23.5,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 35.24,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 7.83,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 353.87,
+        "managementFee": 37.74,
+        "status": "paid",
+        "expectedDepositDate": "2026-05-18",
+        "depositedDate": "2026-05-18"
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "15932931",
+      "status": "checked_in",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Adaeze Okafor",
+        "email": null,
+        "phone": null
+      },
+      "stay": {
+        "checkIn": "2026-05-16",
+        "checkOut": "2026-05-22",
+        "nights": 6,
+        "adults": 3,
+        "children": 0,
+        "infants": 1,
+        "pets": false
+      },
+      "dateBooked": "2026-03-06",
+      "lineItems": [
+        {
+          "description": "Rate for 6 Nights",
+          "amount": 732.14,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 52.33,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 78.49,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 17.44,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 762.32,
+        "managementFee": 109.82,
+        "status": "pending",
+        "expectedDepositDate": "2026-05-19",
+        "depositedDate": null
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "a0APl00000J9LQ6MMAB",
+      "status": "blocked",
+      "bookingSite": null,
+      "guest": null,
+      "stay": {
+        "checkIn": "2026-05-22",
+        "checkOut": "2026-05-26",
+        "nights": 4,
+        "adults": null,
+        "children": null,
+        "infants": null,
+        "pets": null
+      },
+      "dateBooked": "2026-05-22",
+      "lineItems": [],
+      "payout": null,
+      "returningGuest": false
+    },
+    {
+      "id": "15003717",
+      "status": "booked",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Polly Westbrook",
+        "email": "pwestbrook@hotmail.com",
+        "phone": "+1 555-441-3143"
+      },
+      "stay": {
+        "checkIn": "2026-05-27",
+        "checkOut": "2026-06-01",
+        "nights": 5,
+        "adults": 2,
+        "children": 2,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-04-18",
+      "lineItems": [
+        {
+          "description": "Rate for 5 Nights",
+          "amount": 703.92,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 50.64,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 75.95,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 16.88,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 738.33,
+        "managementFee": 105.59,
+        "status": "scheduled",
+        "expectedDepositDate": "2026-05-29",
+        "depositedDate": null
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "15990957",
+      "status": "booked",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Olivia Trent",
+        "email": null,
+        "phone": "+1 555-252-9938"
+      },
+      "stay": {
+        "checkIn": "2026-06-02",
+        "checkOut": "2026-06-09",
+        "nights": 7,
+        "adults": 2,
+        "children": 2,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-04-15",
+      "lineItems": [
+        {
+          "description": "Rate for 7 Nights",
+          "amount": 952.79,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 65.57,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 98.35,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 21.86,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 949.87,
+        "managementFee": 142.92,
+        "status": "scheduled",
+        "expectedDepositDate": "2026-06-04",
+        "depositedDate": null
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "a0APl000001CJE1CMAB",
+      "status": "blocked",
+      "bookingSite": null,
+      "guest": null,
+      "stay": {
+        "checkIn": "2026-06-11",
+        "checkOut": "2026-06-14",
+        "nights": 3,
+        "adults": null,
+        "children": null,
+        "infants": null,
+        "pets": null
+      },
+      "dateBooked": "2026-06-11",
+      "lineItems": [],
+      "payout": null,
+      "returningGuest": false
+    },
+    {
+      "id": "a0APl00000XZ1CPNMAB",
+      "status": "blocked",
+      "bookingSite": null,
+      "guest": null,
+      "stay": {
+        "checkIn": "2026-06-18",
+        "checkOut": "2026-06-22",
+        "nights": 4,
+        "adults": null,
+        "children": null,
+        "infants": null,
+        "pets": null
+      },
+      "dateBooked": "2026-06-18",
+      "lineItems": [],
+      "payout": null,
+      "returningGuest": false
+    },
+    {
+      "id": "F33763566",
+      "status": "booked",
+      "bookingSite": "VRBO",
+      "guest": {
+        "name": "Vanessa Cho",
+        "email": null,
+        "phone": "+1 555-125-3938"
+      },
+      "stay": {
+        "checkIn": "2026-06-28",
+        "checkOut": "2026-07-01",
+        "nights": 3,
+        "adults": 3,
+        "children": 1,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-04-16",
+      "lineItems": [
+        {
+          "description": "Rate for 3 Nights",
+          "amount": 411.41,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 33.08,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 49.63,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 11.03,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 489.7,
+        "managementFee": 61.71,
+        "status": "scheduled",
+        "expectedDepositDate": "2026-06-30",
+        "depositedDate": null
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "D61343880",
+      "status": "booked",
+      "bookingSite": "VRBO",
+      "guest": {
+        "name": "Annabel Forsythe",
+        "email": null,
+        "phone": "+1 555-979-8711"
+      },
+      "stay": {
+        "checkIn": "2026-07-08",
+        "checkOut": "2026-07-12",
+        "nights": 4,
+        "adults": 3,
+        "children": 1,
+        "infants": 1,
+        "pets": false
+      },
+      "dateBooked": "2026-05-03",
+      "lineItems": [
+        {
+          "description": "Rate for 4 Nights",
+          "amount": 602.3,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 44.54,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 66.81,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 14.85,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 651.95,
+        "managementFee": 90.35,
+        "status": "scheduled",
+        "expectedDepositDate": "2026-07-10",
+        "depositedDate": null
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "15024813",
+      "status": "booked",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Henri Beauchene",
+        "email": "h.beauchene@gmail.com",
+        "phone": "+1 555-775-4164"
+      },
+      "stay": {
+        "checkIn": "2026-07-12",
+        "checkOut": "2026-07-19",
+        "nights": 7,
+        "adults": 2,
+        "children": 2,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-05-09",
+      "lineItems": [
+        {
+          "description": "Rate for 7 Nights",
+          "amount": 955.44,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 65.73,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 98.59,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 21.91,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 952.12,
+        "managementFee": 143.32,
+        "status": "scheduled",
+        "expectedDepositDate": "2026-07-14",
+        "depositedDate": null
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "N81969657",
+      "status": "booked",
+      "bookingSite": "VRBO",
+      "guest": {
+        "name": "Ruth Yamamoto",
+        "email": null,
+        "phone": null
+      },
+      "stay": {
+        "checkIn": "2026-07-24",
+        "checkOut": "2026-07-30",
+        "nights": 6,
+        "adults": 2,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-07-11",
+      "lineItems": [
+        {
+          "description": "Rate for 6 Nights",
+          "amount": 918.99,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 63.54,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 95.31,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 21.18,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 921.14,
+        "managementFee": 137.85,
+        "status": "scheduled",
+        "expectedDepositDate": "2026-07-28",
+        "depositedDate": null
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "15824629",
+      "status": "booked",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Priya Nair",
+        "email": "priya.nair11@gmail.com",
+        "phone": "+1 555-421-8149"
+      },
+      "stay": {
+        "checkIn": "2026-08-02",
+        "checkOut": "2026-08-05",
+        "nights": 3,
+        "adults": 1,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-06-11",
+      "lineItems": [
+        {
+          "description": "Rate for 3 Nights",
+          "amount": 399.56,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 32.37,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 48.56,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 10.79,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 479.63,
+        "managementFee": 59.93,
+        "status": "scheduled",
+        "expectedDepositDate": "2026-08-04",
+        "depositedDate": null
+      },
+      "returningGuest": true
+    },
+    {
+      "id": "15845687",
+      "status": "booked",
+      "bookingSite": "Airbnb",
+      "guest": {
+        "name": "Dean Quintanilla",
+        "email": "dquintanilla@gmail.com",
+        "phone": "+1 555-651-4228"
+      },
+      "stay": {
+        "checkIn": "2026-08-05",
+        "checkOut": "2026-08-09",
+        "nights": 4,
+        "adults": 2,
+        "children": 0,
+        "infants": 0,
+        "pets": false
+      },
+      "dateBooked": "2026-06-28",
+      "lineItems": [
+        {
+          "description": "Rate for 4 Nights",
+          "amount": 482.55,
+          "type": "base"
+        },
+        {
+          "description": "Cleaning Fee",
+          "amount": 140.0,
+          "type": "fee"
+        },
+        {
+          "description": "Texas State Hotel Occupancy Tax",
+          "amount": 37.35,
+          "type": "tax"
+        },
+        {
+          "description": "City of Austin Hotel Occupancy Tax",
+          "amount": 56.03,
+          "type": "tax"
+        },
+        {
+          "description": "Travis County Venue Project Tax",
+          "amount": 12.45,
+          "type": "tax"
+        }
+      ],
+      "payout": {
+        "amount": 550.17,
+        "managementFee": 72.38,
+        "status": "scheduled",
+        "expectedDepositDate": "2026-08-07",
+        "depositedDate": null
+      },
+      "returningGuest": false
+    },
+    {
+      "id": "a0APl00000C2NBAUMAB",
+      "status": "blocked",
+      "bookingSite": null,
+      "guest": null,
+      "stay": {
+        "checkIn": "2026-09-17",
+        "checkOut": "2026-09-21",
+        "nights": 4,
+        "adults": null,
+        "children": null,
+        "infants": null,
+        "pets": null
+      },
+      "dateBooked": "2026-09-17",
+      "lineItems": [],
+      "payout": null,
+      "returningGuest": false
+    }
+  ]
+}
