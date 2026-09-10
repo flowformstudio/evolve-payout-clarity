@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react'
 import type { Booking, Dataset } from '../../lib/types'
-import { addDays, fmtRange, money, parseISO, toISO } from '../../lib/format'
+import { addDays, money, parseISO, toISO } from '../../lib/format'
 import { listRateFor, nightlyRatesFor, type NightRate } from '../prototype-additions'
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -84,10 +84,6 @@ export function NightlyRates({ ds, booking }: { ds: Dataset; booking: Booking })
                 {weekendCount === 1 ? 'One night' : `${weekendCount} nights`} fell on a Friday or Saturday. Weekend nights are priced above weeknights.
               </li>
             ) : null}
-            {discountKinds.includes('Midweek') ? (
-              <li>Tuesday and Wednesday nights carry a 10% midweek discount on stays of 5 nights or more. It fills the nights that are hardest to sell.</li>
-            ) : null}
-            {discountKinds.includes('Weekly stay') ? <li>Stays of 7 nights or more get 10% off every night.</li> : null}
             <li className="nr-proto">
               Prototype note: nightly rates and discounts are illustrative. The dataset holds one total per booking; these nights sum to it exactly.
             </li>
@@ -185,10 +181,6 @@ function Calendar({ y, m, onPrev, onNext, byDate, booking, ds }: CalProps) {
         <button className="cal-nav" onClick={onNext} aria-label="Next month">
           <ChevronRight size={16} />
         </button>
-      </div>
-      <div className="cal-booking">
-        <span className="cal-booking-swatch" aria-hidden />
-        This booking: <strong>{fmtRange(booking.stay.checkIn, booking.stay.checkOut)}</strong> · {booking.stay.nights} nights, highlighted below
       </div>
       <div className="cal-grid" role="grid">
         {DOW.map((d) => (
