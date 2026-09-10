@@ -27,6 +27,18 @@ export function Assumptions({ onClose }: { onClose: () => void }) {
               <strong>Year-to-date strip.</strong> Sums paid deposits dated in 2026, plus pending and scheduled payouts.
             </li>
           </ul>
+          <h3>Option 2 additions</h3>
+          <ul>
+            <li>
+              <strong>Nightly rate calendar.</strong> Prices on days outside this booking come from a simple seasonal model for the listing (weeknight base by month, Friday and Saturday 25% higher). Nights of other bookings show that booking’s derived rate. All of it lives in <code>src/v2/prototype-additions.ts</code> and none of it is in the dataset.
+            </li>
+            <li>
+              <strong>Two example discounts.</strong> A 10% midweek discount on Tuesday and Wednesday nights for stays of 5+ nights, and a 10% weekly discount for 7+ nights. Illustrative only. The nights still sum to the file’s base amount exactly.
+            </li>
+            <li>
+              <strong>One property.</strong> Jordan owns one listing, so Option 2 has no property switcher. Scaling to more listings is a data-shape question (owner → listing → bookings), not a UI control.
+            </li>
+          </ul>
           <h3>Judgement calls</h3>
           <ul>
             <li>Deposit dates in the file land two days after check-in, not the 5 to 9 business days the README describes. The prototype trusts the file’s dates.</li>

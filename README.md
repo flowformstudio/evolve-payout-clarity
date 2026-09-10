@@ -1,8 +1,15 @@
 # Booking payout clarity — Evolve take-home
 
-A prototype of the booking detail screen an Evolve owner (Jordan Avery) sees for a single booking.
-It answers, in order: **What am I getting paid?** then **Where did the money go?** then **What rates
-were booked, and why?**
+Two design options for the booking detail screen an Evolve owner (Jordan Avery) sees for a single
+booking. Both answer, in order: **What am I getting paid?** **When?** **How was it calculated?**
+**What rates were booked?** **What did the guest pay, and where did the rest go?**
+
+- **Option 1** (`#/`): two-pane layout, bookings rail plus detail, everything visible at once.
+- **Option 2** (`#/v2`): one focused single-column page, progressive disclosure, calendar-style
+  nightly rates, discreet demo-state control. Lands on Adaeze Okafor (guest currently staying,
+  payout pending).
+
+A floating pill in the bottom-right switches between them.
 
 - Stack: Vite + React + TypeScript, plain CSS. No backend; the dataset is imported as static JSON.
 - "Today" inside the prototype is 2026-05-17, per the brief.
@@ -15,6 +22,17 @@ npm install
 npm run dev      # http://localhost:5173
 npm run build    # static output in dist/
 ```
+
+## Option 2 in one paragraph
+
+Design thesis: *start with the owner's money, then progressively explain it.* The page follows the
+owner's sequence of questions, not the JSON. Hero (amount, "Expected May 19", bank) → payout
+progress strip → three-line calculation with a fee explainer → "What was booked" collapsed to
+"6 nights · $732.14 stay revenue · $122.02 avg/night", expanding to a month calendar with the price
+under each date, this booking highlighted and discounted nights marked → "What the guest paid",
+expanding to the guest total and a flow to taxes / Evolve / you. The owner has one property, so
+there is no property switcher. Source in `src/v2/`. Prototype-only nightly-rate data is isolated
+in `src/v2/prototype-additions.ts`. The AI workflow record is in `docs/ai-workflow.md`.
 
 ## Structure
 
@@ -32,6 +50,13 @@ src/
     RatesBooked.tsx           nightly rates, discounts, plain-language reasons
     StayDetails.tsx           guest and stay facts
     Assumptions.tsx           the assumptions panel (also in the app's top bar)
+  v2/
+    V2App.tsx                 Option 2 shell, default booking, demo states
+    prototype-additions.ts    PROTOTYPE-ONLY nightly rates and discounts (not in the dataset)
+    components/               BookingHeader, PayoutHero (+ status strip), PayoutBreakdown,
+                              NightlyRates (calendar), GuestCharges, Info, BookingStateSwitcher
+  OptionSwitcher.tsx          floating Option 1 / Option 2 pill
+docs/ai-workflow.md           running record of where AI helped and where judgement stayed human
 ```
 
 ## Key decisions

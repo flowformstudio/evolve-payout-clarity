@@ -885,3 +885,40 @@ tr.is-weekend .night-dow {
     display: none;
   }
 }
+
+/* ---------- option switcher (prototype navigation, both options) ---------- */
+.optsw {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  display: flex;
+  gap: 2px;
+  padding: 4px;
+  background: #1b1d21;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+.optsw a {
+  color: #c9ccd2;
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.optsw a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.optsw a.is-active {
+  background: #fff;
+  color: #1b1d21;
+}
+
+/* Option 2 uses normal document scrolling; Option 1 locks the page and scrolls its panes. */
+html.is-v2,
+html.is-v2 body {
+  overflow: auto;
+  height: auto;
+}
