@@ -43,7 +43,7 @@ export function PayoutHero({ ds, booking, today }: { ds: Dataset; booking: Booki
 }
 
 /** Compact "where is my money right now" strip. Steps never contradict the file. */
-function PayoutStatus({ booking, today }: { booking: Booking; today: string }) {
+export function PayoutStatus({ booking, today }: { booking: Booking; today: string }) {
   const p = booking.payout!
   const s = booking.stay
 
