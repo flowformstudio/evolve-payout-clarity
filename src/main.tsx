@@ -4,6 +4,7 @@ import './styles.css'
 import App from './App.tsx'
 import V2App from './v2/V2App.tsx'
 import V3App from './v3/V3App.tsx'
+import V4App from './v4/V4App.tsx'
 import { OptionSwitcher } from './OptionSwitcher.tsx'
 
 /** Option routing: "#/v2..." renders Option 2, anything else Option 1. */
@@ -16,13 +17,14 @@ function Root() {
   }, [])
   const v2 = hash.startsWith('#/v2')
   const v3 = hash.startsWith('#/v3')
+  const v4 = hash.startsWith('#/v4')
   useEffect(() => {
-    document.documentElement.classList.toggle('is-v2', v2 || v3)
-  }, [v2, v3])
+    document.documentElement.classList.toggle('is-v2', v2 || v3 || v4)
+  }, [v2, v3, v4])
   return (
     <>
-      {v3 ? <V3App /> : v2 ? <V2App /> : <App />}
-      <OptionSwitcher current={v3 ? 3 : v2 ? 2 : 1} />
+      {v4 ? <V4App /> : v3 ? <V3App /> : v2 ? <V2App /> : <App />}
+      <OptionSwitcher current={v4 ? 4 : v3 ? 3 : v2 ? 2 : 1} />
     </>
   )
 }

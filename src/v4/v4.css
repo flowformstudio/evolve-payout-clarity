@@ -1,0 +1,86 @@
+/* Option 4: full-width payout banner, then calculation | guest charges, then calendar. */
+.v4 .page4 {
+  max-width: 1040px;
+  gap: 16px;
+}
+.v4 .guest-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 4px 4px 6px;
+}
+.v4 .avatar4 {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e2e8f5;
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.v4 .guest-strip-main {
+  min-width: 0;
+}
+.v4 .guest-strip-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.v4 .guest-strip-name {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.v4 .guest-strip-meta {
+  color: var(--ink-2);
+  font-size: 14px;
+  margin-top: 2px;
+}
+.v4 .guest-strip-actions {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* banner: reuse the v3 payout tile at full width, with more room for the strip */
+.v4 .tile-payout {
+  padding: 28px 32px 24px;
+}
+.v4 .payout-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+}
+.v4 .tile-payout .hero2-amount {
+  font-size: 56px;
+}
+
+.v4 .cols4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.v4 .cols4 .sec {
+  height: 100%;
+}
+.v4 .cols4 .sec-head {
+  flex-wrap: wrap;
+}
+.v4 .cols4 .flow2 {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .v4 .cols4 {
+    grid-template-columns: 1fr;
+  }
+  .v4 .guest-strip {
+    flex-wrap: wrap;
+  }
+  .v4 .guest-strip-actions {
+    margin-left: 58px;
+  }
+}

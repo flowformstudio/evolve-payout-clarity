@@ -8,8 +8,8 @@ import { Info } from './Info'
  * Guest charges vs your payout. Taxes are collected from the guest and remitted; they are
  * never "deducted" from the owner. The flow makes the three destinations explicit.
  */
-export function GuestCharges({ ds, booking }: { ds: Dataset; booking: Booking }) {
-  const [open, setOpen] = useState(false)
+export function GuestCharges({ ds, booking, defaultOpen = false }: { ds: Dataset; booking: Booking; defaultOpen?: boolean }) {
+  const [open, setOpen] = useState(defaultOpen)
   const base = booking.lineItems.find((l) => l.type === 'base')!.amount
   const cleaning = booking.lineItems.find((l) => l.type === 'fee')?.amount ?? 0
   const taxes = booking.lineItems.filter((l) => l.type === 'tax')
