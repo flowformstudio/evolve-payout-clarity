@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronDown, ChevronLeft, ChevronRight, DoorOpen } from 'lucide-react'
 import type { Booking, Dataset } from '../../lib/types'
 import { addDays, money, parseISO, toISO } from '../../lib/format'
 import { listRateFor, nightlyRatesFor, type NightRate } from '../prototype-additions'
@@ -216,7 +216,11 @@ function Calendar({ y, m, onPrev, onNext, byDate, booking, ds }: CalProps) {
                   </span>
                 </span>
               ) : null}
-              {date === booking.stay.checkIn && !night?.discount ? <span className="cal-tag cal-tag-in">Check-in</span> : null}
+              {date === booking.stay.checkIn && !night?.discount ? (
+                <span className="cal-icon" title="Check-in" aria-label="Check-in">
+                  <DoorOpen size={15} strokeWidth={2} aria-hidden />
+                </span>
+              ) : null}
 
             </div>
           )

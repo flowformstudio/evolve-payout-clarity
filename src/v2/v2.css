@@ -689,10 +689,13 @@
   right: auto;
   left: 0;
 }
-.v2 .cal-tag-in {
-  background: rgba(255, 255, 255, 0.18);
+.v2 .cal-icon {
+  position: absolute;
+  top: 7px;
+  right: 7px;
   color: #fff;
-  font-weight: 600;
+  opacity: 0.9;
+  display: inline-flex;
 }
 .v2 .nr-legend {
   display: flex;
