@@ -177,6 +177,7 @@ function Calendar({ y, m, onPrev, onNext, byDate, booking, ds }: CalProps) {
         </button>
         <span className="cal-month">
           {MONTHS[m]} {y}
+          <span className="cal-today-note">Today is {fmtNight(today)}, {parseISO(today).getFullYear()}</span>
         </span>
         <button className="cal-nav" onClick={onNext} aria-label="Next month">
           <ChevronRight size={16} />

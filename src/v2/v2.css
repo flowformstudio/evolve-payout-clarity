@@ -495,6 +495,29 @@
 .v2 .cal-month {
   font-weight: 600;
   font-size: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.25;
+}
+.v2 .cal-today-note {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-3);
+}
+.v2 .cal-today-note::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--amber);
+  margin-right: 6px;
+  vertical-align: 1px;
+}
+.v2 .cal-cell.is-today {
+  box-shadow: inset 0 0 0 2px var(--amber);
 }
 .v2 .cal-nav {
   background: none;
@@ -613,11 +636,11 @@
   vertical-align: 3px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--ink-3);
-  font-weight: 600;
+  color: var(--amber);
+  font-weight: 700;
 }
 .v2 .cal-cell.is-booked.is-today .cal-day::after {
-  color: #d5eadf;
+  color: #ffd98a;
 }
 .v2 .cal-tag {
   position: absolute;
