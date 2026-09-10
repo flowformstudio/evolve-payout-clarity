@@ -566,15 +566,56 @@
   background: repeating-linear-gradient(-45deg, #f4f3ef 0 6px, #ecebe6 6px 8px);
 }
 .v2 .cal-cell.is-booked {
-  background: var(--green-bg);
-  box-shadow: inset 0 2px 0 var(--green);
+  background: var(--green);
+  color: #fff;
+  border-top-color: var(--green);
+  box-shadow: inset 0 3px 0 #0f4a32;
 }
 .v2 .cal-cell.is-booked .cal-day {
-  color: var(--green);
+  color: #fff;
   font-weight: 700;
 }
+.v2 .cal-cell.is-booked .cal-rate {
+  color: #fff;
+  font-size: 14px;
+}
+.v2 .cal-cell.is-booked .cal-rate s {
+  color: #bfe0cf;
+}
+.v2 .cal-cell.is-booked.is-today .cal-day::after {
+  color: #d5eadf;
+}
 .v2 .cal-cell.is-start {
-  border-top-left-radius: 0;
+  border-radius: 8px 0 0 8px;
+}
+.v2 .cal-cell.is-end {
+  border-radius: 0 8px 8px 0;
+}
+.v2 .cal-cell.is-start.is-end {
+  border-radius: 8px;
+}
+.v2 .cal-cell.is-booked + .cal-cell.is-booked {
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+.v2 .cal-booking {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  font-size: 13.5px;
+  color: var(--ink-2);
+  background: var(--green-bg);
+  border-bottom: 1px solid var(--line);
+}
+.v2 .cal-booking strong {
+  color: var(--ink);
+}
+.v2 .cal-booking-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: var(--green);
+  flex-shrink: 0;
 }
 .v2 .cal-cell.is-today .cal-day::after {
   content: 'today';
@@ -593,8 +634,13 @@
   font-weight: 700;
   padding: 1px 5px;
   border-radius: 4px;
-  background: var(--green);
+  background: #fff;
+  color: var(--green);
+}
+.v2 .cal-tag-in {
+  background: rgba(255, 255, 255, 0.18);
   color: #fff;
+  font-weight: 600;
 }
 .v2 .cal-tag-out {
   background: transparent;
@@ -626,12 +672,13 @@
   border: 1px solid var(--line-2);
 }
 .v2 .lg-booked {
-  background: var(--green-bg);
+  background: var(--green);
   border-color: var(--green);
 }
 .v2 .lg-discount {
-  background: var(--green);
+  background: #fff;
   border-color: var(--green);
+  box-shadow: inset 0 0 0 2px var(--green-bg);
 }
 .v2 .lg-other {
   background: #efeee9;

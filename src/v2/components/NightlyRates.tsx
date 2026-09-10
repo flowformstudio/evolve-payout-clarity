@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react'
 import type { Booking, Dataset } from '../../lib/types'
-import { addDays, money, parseISO, toISO } from '../../lib/format'
+import { addDays, fmtRange, money, parseISO, toISO } from '../../lib/format'
 import { listRateFor, nightlyRatesFor, type NightRate } from '../prototype-additions'
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -78,7 +78,7 @@ export function NightlyRates({ ds, booking }: { ds: Dataset; booking: Booking })
             {discountKinds.includes('Midweek') ? (
               <li>Tuesday and Wednesday nights carry a 10% midweek discount on stays of 5 nights or more. It fills the nights that are hardest to sell.</li>
             ) : null}
-            {discountKinds.includes('Weekly') ? <li>Stays of 7 nights or more get 10% off every night.</li> : null}
+            {discountKinds.includes('Weekly stay') ? <li>Stays of 7 nights or more get 10% off every night.</li> : null}
             <li className="nr-proto">
               Prototype note: nightly rates and discounts are illustrative. The dataset holds one total per booking; these nights sum to it exactly.
             </li>
@@ -166,6 +166,10 @@ function Calendar({ y, m, onPrev, onNext, byDate, booking, ds }: CalProps) {
           <ChevronRight size={16} />
         </button>
       </div>
+      <div className="cal-booking">
+        <span className="cal-booking-swatch" aria-hidden />
+        This booking: <strong>{fmtRange(booking.stay.checkIn, booking.stay.checkOut)}</strong> · {booking.stay.nights} nights, highlighted below
+      </div>
       <div className="cal-grid" role="grid">
         {DOW.map((d) => (
           <div key={d} className="cal-dow" role="columnheader">
@@ -209,6 +213,7 @@ function Calendar({ y, m, onPrev, onNext, byDate, booking, ds }: CalProps) {
                 <span className="cal-rate cal-muted">${Math.round(listRateFor(date))}</span>
               )}
               {night?.discount ? <span className="cal-tag">−{Math.round(night.discount.pct * 100)}%</span> : null}
+              {date === booking.stay.checkIn && !night?.discount ? <span className="cal-tag cal-tag-in">Check-in</span> : null}
               {isCheckout && !night ? <span className="cal-tag cal-tag-out">Check-out</span> : null}
             </div>
           )
