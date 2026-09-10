@@ -22,7 +22,6 @@ export function NightlyRates({ ds, booking }: { ds: Dataset; booking: Booking })
   const ci = parseISO(booking.stay.checkIn)
   const [month, setMonth] = useState({ y: ci.getFullYear(), m: ci.getMonth() })
 
-  const weekendCount = nights.filter((n) => n.weekend).length
 
   return (
     <section className="sec" aria-labelledby="nr-title">
@@ -68,16 +67,6 @@ export function NightlyRates({ ds, booking }: { ds: Dataset; booking: Booking })
             </span>
           </div>
 
-          <ul className="nr-why">
-            {weekendCount ? (
-              <li>
-                {weekendCount === 1 ? 'One night' : `${weekendCount} nights`} fell on a Friday or Saturday. Weekend nights are priced above weeknights.
-              </li>
-            ) : null}
-            <li className="nr-proto">
-              Prototype note: nightly rates and discounts are illustrative. The dataset holds one total per booking; these nights sum to it exactly.
-            </li>
-          </ul>
 
           <table className="nr-table">
             <caption className="sr-only">Nightly rates for this booking</caption>
