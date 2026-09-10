@@ -204,7 +204,7 @@ function Calendar({ y, m, onPrev, onNext, byDate, booking, ds }: CalProps) {
           const label = night
             ? `${date}: ${money(night.rate)}${night.discount ? `, ${night.discount.label} discount` : ''}, this booking`
             : occ === 'blocked'
-              ? `${date}: blocked by you`
+              ? `${date}: blocked by you, list rate ${money(listRateFor(date))}`
               : occ === 'other'
                 ? `${date}: booked by ${other!.guest}, ${money(other!.rate!)}`
                 : `${date}: list rate ${money(listRateFor(date))}`
@@ -219,7 +219,7 @@ function Calendar({ y, m, onPrev, onNext, byDate, booking, ds }: CalProps) {
                   {night.discount ? <s>{Math.round(night.listRate)}</s> : null}${Math.round(night.rate)}
                 </span>
               ) : occ === 'blocked' ? (
-                <span className="cal-rate cal-muted">no rate</span>
+                <span className="cal-rate cal-muted">${Math.round(listRateFor(date))}</span>
               ) : occ === 'other' ? (
                 <span className="cal-rate cal-muted">${Math.round(other!.rate!)}</span>
               ) : (
