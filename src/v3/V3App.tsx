@@ -100,13 +100,13 @@ export default function V3App() {
           </section>
         ) : (
           <div className="tiles">
-            <GuestTile ds={ds} booking={booking} />
             <PayoutTile ds={ds} booking={booking} today={today} />
-            <div className="tile-wrap">
-              <GuestCharges ds={ds} booking={booking} />
-            </div>
+            <GuestTile ds={ds} booking={booking} />
             <div className="tile-wrap">
               <PayoutBreakdown ds={ds} booking={booking} />
+            </div>
+            <div className="tile-wrap">
+              <GuestCharges ds={ds} booking={booking} />
             </div>
             <div className="tile-wrap tile-full">
               <NightlyRates ds={ds} booking={booking} />
