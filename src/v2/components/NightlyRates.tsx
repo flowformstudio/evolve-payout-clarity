@@ -23,10 +23,6 @@ export function NightlyRates({ ds, booking }: { ds: Dataset; booking: Booking })
   const [month, setMonth] = useState({ y: ci.getFullYear(), m: ci.getMonth() })
 
   const discountKinds = Array.from(new Set(nights.filter((n) => n.discount).map((n) => n.discount!.label)))
-  const discountSummary = discountKinds.map((label) => {
-    const ns = nights.filter((n) => n.discount?.label === label)
-    return { label, pct: ns[0].discount!.pct, nights: ns.length, saved: Math.round(ns.reduce((s, n) => s + (n.listRate - n.rate), 0) * 100) / 100 }
-  })
   const weekendCount = nights.filter((n) => n.weekend).length
 
   return (
@@ -62,11 +58,11 @@ export function NightlyRates({ ds, booking }: { ds: Dataset; booking: Booking })
             <span>
               <i className="lg lg-booked" /> This booking
             </span>
-            {discountSummary.map((d) => (
-              <span key={d.label}>
-                <i className="lg lg-discount">−{Math.round(d.pct * 100)}%</i> {d.label} discount, {d.nights} {d.nights === 1 ? 'night' : 'nights'}, saves the guest {money(d.saved)}
+            {discountKinds.length ? (
+              <span>
+                <i className="lg lg-discount">−10%</i> Discounted night, hover for why
               </span>
-            ))}
+            ) : null}
             <span>
               <i className="lg lg-other" /> Other guests’ bookings
             </span>
