@@ -2,6 +2,7 @@ import type { Booking, Dataset } from '../lib/types'
 import { fmtDate, money, parseISO } from '../lib/format'
 import { nightlyRatesFor } from '../v2/prototype-additions'
 import { PayoutStatus } from '../v2/components/PayoutHero'
+import { MiniMonth } from '../v4/MiniMonth'
 
 const DOW = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
 
@@ -9,7 +10,7 @@ const DOW = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
  * The big tile. Amount first, when second, bank third, then a compact night-by-night strip
  * that shows the rates the guest saw for the nights that make up this payout.
  */
-export function PayoutTile({ ds, booking, today }: { ds: Dataset; booking: Booking; today: string }) {
+export function PayoutTile({ ds, booking, today, rateView = 'strip' }: { ds: Dataset; booking: Booking; today: string; rateView?: 'strip' | 'month' }) {
   const p = booking.payout!
   const bank = `${ds.owner.bankAccount.institution} •••• ${ds.owner.bankAccount.lastFour}`
   const nights = nightlyRatesFor(booking)
@@ -43,6 +44,9 @@ export function PayoutTile({ ds, booking, today }: { ds: Dataset; booking: Booki
           <div className="hero2-note">{note}</div>
         </div>
 
+        {rateView === 'month' ? (
+          <MiniMonth ds={ds} booking={booking} />
+        ) : (
         <div className="mini" aria-label="Nightly rates for this stay">
           <div className="mini-head">
             <span>Nightly rates</span>
@@ -67,6 +71,7 @@ export function PayoutTile({ ds, booking, today }: { ds: Dataset; booking: Booki
             {money(base)} stay revenue + {money(ds.listing.cleaningFee)} cleaning − {Math.round(ds.listing.managementFeeRate * 100)}% Evolve fee
           </div>
         </div>
+        )}
       </div>
 
       <PayoutStatus booking={booking} today={today} />

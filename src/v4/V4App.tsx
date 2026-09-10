@@ -147,7 +147,7 @@ export default function V4App() {
           </section>
         ) : (
           <>
-            <PayoutTile ds={ds} booking={booking} today={today} />
+            <PayoutTile ds={ds} booking={booking} today={today} rateView="month" />
             <div className="cols4">
               <div className="tile-wrap">
                 <PayoutBreakdown ds={ds} booking={booking} />
