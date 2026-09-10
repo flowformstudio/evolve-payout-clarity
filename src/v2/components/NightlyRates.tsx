@@ -22,7 +22,6 @@ export function NightlyRates({ ds, booking }: { ds: Dataset; booking: Booking })
   const ci = parseISO(booking.stay.checkIn)
   const [month, setMonth] = useState({ y: ci.getFullYear(), m: ci.getMonth() })
 
-  const discountKinds = Array.from(new Set(nights.filter((n) => n.discount).map((n) => n.discount!.label)))
   const weekendCount = nights.filter((n) => n.weekend).length
 
   return (
@@ -58,11 +57,6 @@ export function NightlyRates({ ds, booking }: { ds: Dataset; booking: Booking })
             <span>
               <i className="lg lg-booked" /> This booking
             </span>
-            {discountKinds.length ? (
-              <span>
-                <i className="lg lg-discount">−10%</i> Discounted night, hover for why
-              </span>
-            ) : null}
             <span>
               <i className="lg lg-other" /> Other guests’ bookings
             </span>
