@@ -1,5 +1,5 @@
 /** Floating pill to move between the design options in this repo. Prototype navigation only. */
-export function OptionSwitcher({ current }: { current: 1 | 2 | 3 | 4 }) {
+export function OptionSwitcher({ current }: { current: 1 | 2 | 3 | 4 | 5 }) {
   return (
     <nav className="optsw" aria-label="Design options">
       <a href="#/" className={current === 1 ? 'is-active' : ''} aria-current={current === 1 ? 'page' : undefined}>
@@ -13,6 +13,9 @@ export function OptionSwitcher({ current }: { current: 1 | 2 | 3 | 4 }) {
       </a>
       <a href="#/v4" className={current === 4 ? 'is-active' : ''} aria-current={current === 4 ? 'page' : undefined}>
         Option 4
+      </a>
+      <a href="#/v5" className={current === 5 ? 'is-active' : ''} aria-current={current === 5 ? 'page' : undefined}>
+        Option 5
       </a>
     </nav>
   )

@@ -1,0 +1,184 @@
+/* Option 5: one earnings card with a You earn | Guest paid switch. */
+.v5 .page5 {
+  max-width: 720px;
+  gap: 16px;
+}
+.v5 .ec {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px 28px 22px;
+}
+.v5 .ec-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #eeece7;
+  border-radius: 999px;
+  padding: 4px;
+  margin: 0 auto 22px;
+  max-width: 360px;
+}
+.v5 .ec-toggle button {
+  border: 0;
+  background: transparent;
+  border-radius: 999px;
+  padding: 9px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.v5 .ec-toggle button.is-on {
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.v5 .ec-panel {
+  text-align: center;
+}
+.v5 .ec-amount {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+.v5 .ec.is-canceled .ec-amount {
+  color: var(--ink-3);
+}
+.v5 .ec-when {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--ink-2);
+}
+.v5 .ec.is-pending .ec-when {
+  color: var(--amber);
+  font-weight: 500;
+}
+.v5 .ec.is-paid .ec-when {
+  color: var(--green);
+  font-weight: 500;
+}
+.v5 .ec.is-scheduled .ec-when {
+  color: var(--blue);
+  font-weight: 500;
+}
+.v5 .ec.is-canceled .ec-when {
+  color: var(--red);
+  font-weight: 500;
+}
+.v5 .ec-ledger {
+  text-align: left;
+  margin: 26px 0 0;
+  font-variant-numeric: tabular-nums;
+}
+.v5 .ec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+.v5 .ec-row dt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink);
+}
+.v5 .ec-row dd {
+  font-weight: 500;
+}
+.v5 .ec-fee dd {
+  color: var(--amber);
+}
+.v5 .ec-total {
+  border-bottom: 0;
+  padding-top: 16px;
+}
+.v5 .ec-total dt {
+  font-weight: 700;
+}
+.v5 .ec-total dd {
+  font-weight: 700;
+  font-size: 18px;
+}
+.v5 .ec-expand {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.v5 .ec-expand:hover {
+  text-decoration: underline;
+}
+.v5 .ec-sub {
+  padding: 4px 0 8px 16px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13.5px;
+  color: var(--ink-2);
+}
+.v5 .ec-subrow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 4px 0;
+}
+.v5 .ec-num {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.v5 .ec-num s {
+  color: var(--ink-3);
+  margin-right: 4px;
+}
+.v5 .ec-dim {
+  color: var(--ink-3);
+  font-weight: 400;
+}
+.v5 .ec-note-row {
+  font-size: 13px;
+  color: var(--ink-3);
+}
+.v5 .ec-note-row dt {
+  color: var(--ink-3);
+}
+.v5 .ec-foot {
+  text-align: left;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+.v5 .ec-split {
+  margin-top: 16px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.v5 .ec-split-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--ink-2);
+}
+.v5 .ec-split-row.is-you {
+  background: var(--green-bg);
+  border-color: #cfe4d7;
+  color: var(--green);
+  font-weight: 600;
+}
+.v5 .ec .ps {
+  margin-top: 24px;
+}
