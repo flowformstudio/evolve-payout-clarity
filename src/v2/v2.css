@@ -629,19 +629,6 @@
 .v2 .cal-cell.is-booked .cal-rate s {
   color: #bfe0cf;
 }
-.v2 .cal-cell.is-today .cal-day::after {
-  content: 'today';
-  margin-left: 5px;
-  font-size: 9px;
-  vertical-align: 3px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--amber);
-  font-weight: 700;
-}
-.v2 .cal-cell.is-booked.is-today .cal-day::after {
-  color: #ffd98a;
-}
 .v2 .cal-tag {
   position: absolute;
   top: 6px;
