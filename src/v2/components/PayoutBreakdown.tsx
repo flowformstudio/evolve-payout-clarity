@@ -27,7 +27,7 @@ export function PayoutBreakdown({ ds, booking }: { ds: Dataset; booking: Booking
         </div>
         <div className="calc-row calc-fee">
           <dt>
-            Evolve management fee
+            Evolve management fee <span className="calc-hint">({ratePct}% of stay revenue)</span>
             <Info label="About the management fee">
               Your {ds.owner.plan} plan management fee is {ratePct}% of the nightly rate. The cleaning fee passes through to you in full.
               {!canceled ? (

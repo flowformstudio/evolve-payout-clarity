@@ -418,6 +418,10 @@
 .v2 .calc-fee dd {
   color: var(--amber);
 }
+.v2 .calc-hint {
+  color: var(--ink-3);
+  font-size: 13.5px;
+}
 .v2 .calc-total {
   border-bottom: 0;
   padding-top: 12px;
