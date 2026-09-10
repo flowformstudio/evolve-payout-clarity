@@ -25,7 +25,7 @@ export interface NightRate {
   /** The list price before discount. Equals `rate` when no discount applied. */
   listRate: number
   weekend: boolean
-  discount: { label: string; pct: number } | null
+  discount: { label: string; pct: number; reason: string } | null
 }
 
 const round2 = (n: number) => Math.round(n * 100) / 100
@@ -55,10 +55,20 @@ export function listRateFor(date: string): number {
   return round2(seasonBase(date) * (isWeekendNight(date) ? WEEKEND_UPLIFT : 1))
 }
 
-function discountFor(b: Booking, date: string): { label: string; pct: number } | null {
+function discountFor(b: Booking, date: string): { label: string; pct: number; reason: string } | null {
   const dow = parseISO(date).getDay()
-  if (b.stay.nights >= 7) return { label: 'Weekly stay', pct: 0.1 }
-  if (b.stay.nights >= 5 && (dow === 2 || dow === 3)) return { label: 'Midweek', pct: 0.1 }
+  if (b.stay.nights >= 7)
+    return {
+      label: 'Weekly stay',
+      pct: 0.1,
+      reason: `This guest booked ${b.stay.nights} nights. Stays of 7 nights or more get 10% off every night. Longer stays mean fewer turnovers and fewer empty nights between guests.`,
+    }
+  if (b.stay.nights >= 5 && (dow === 2 || dow === 3))
+    return {
+      label: 'Midweek',
+      pct: 0.1,
+      reason: 'Tuesday and Wednesday nights are the hardest to fill. On stays of 5 nights or more, a 10% midweek discount keeps the whole stay booked instead of leaving a gap.',
+    }
   return null
 }
 

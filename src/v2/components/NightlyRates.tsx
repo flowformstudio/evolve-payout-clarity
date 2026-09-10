@@ -101,7 +101,18 @@ export function NightlyRates({ ds, booking }: { ds: Dataset; booking: Booking })
                   <td className="nr-date">{fmtNight(n.date)}</td>
                   <td className="nr-kind">
                     {n.weekend ? 'Weekend rate' : 'Weekday rate'}
-                    {n.discount ? ` · ${n.discount.label} −${Math.round(n.discount.pct * 100)}%` : ''}
+                    {n.discount ? (
+                      <>
+                        {' · '}
+                        <span className="has-tip nr-disc" tabIndex={0}>
+                          {n.discount.label} −{Math.round(n.discount.pct * 100)}%
+                          <span className="cal-tip" role="tooltip">
+                            <strong>{n.discount.label} discount</strong>
+                            {n.discount.reason}
+                          </span>
+                        </span>
+                      </>
+                    ) : null}
                   </td>
                   <td className="nr-amt">
                     {n.discount ? <s>{money(n.listRate)}</s> : null} {money(n.rate)}
@@ -188,7 +199,6 @@ function Calendar({ y, m, onPrev, onNext, byDate, booking, ds }: CalProps) {
         {cells.map((date, i) => {
           if (!date) return <div key={`e${i}`} className="cal-cell is-empty" />
           const night = byDate.get(date)
-          const nightIndex = night ? Math.round((parseISO(date).getTime() - parseISO(booking.stay.checkIn).getTime()) / 86400000) + 1 : 0
           const occ = occupancy.get(date)?.kind
           const other = occupancy.get(date)
           const isCheckout = date === booking.stay.checkOut
@@ -211,9 +221,6 @@ function Calendar({ y, m, onPrev, onNext, byDate, booking, ds }: CalProps) {
           return (
             <div key={date} className={cls.join(' ')} role="gridcell" aria-label={label} title={label}>
               <span className="cal-day">{parseISO(date).getDate()}</span>
-              <span className="cal-state">
-                {night ? `Night ${nightIndex} of ${booking.stay.nights}` : occ === 'blocked' ? 'Blocked by you' : occ === 'other' ? 'Booked' : isCheckout ? 'Check-out' : 'Open'}
-              </span>
               {night ? (
                 <span className="cal-rate">
                   {night.discount ? <s>{Math.round(night.listRate)}</s> : null}${Math.round(night.rate)}
@@ -225,7 +232,18 @@ function Calendar({ y, m, onPrev, onNext, byDate, booking, ds }: CalProps) {
               ) : (
                 <span className="cal-rate cal-muted">${Math.round(listRateFor(date))}</span>
               )}
-              {night?.discount ? <span className="cal-tag">−{Math.round(night.discount.pct * 100)}%</span> : null}
+              {night?.discount ? (
+                <span className="cal-tag has-tip" tabIndex={0} aria-describedby={`tip-${date}`}>
+                  −{Math.round(night.discount.pct * 100)}%
+                  <span className="cal-tip" role="tooltip" id={`tip-${date}`}>
+                    <strong>{night.discount.label} discount</strong>
+                    {night.discount.reason}
+                    <em>
+                      {money(night.listRate)} → {money(night.rate)} · saves {money(night.listRate - night.rate)} this night
+                    </em>
+                  </span>
+                </span>
+              ) : null}
               {date === booking.stay.checkIn && !night?.discount ? <span className="cal-tag cal-tag-in">Check-in</span> : null}
 
             </div>
