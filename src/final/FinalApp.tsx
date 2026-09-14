@@ -233,7 +233,7 @@ function PayoutHero({ ds, booking, today }: { ds: Dataset; booking: Booking; tod
           <>
             {paid ? 'Deposited to' : 'Will be deposited to'} <strong>{bank}</strong>
             <Info label="About the deposit">
-              Payouts go to the bank account on file, {bank}. Deposits usually land a few business days after the guest checks in. Change the account under Settings → Payouts.
+              Payouts go to the bank account on file, {bank}. Evolve processes the transaction about 2 business days after the guest checks in, and it usually lands in your account 5 to 9 business days after check-in. Change the account under Settings → Payouts.
             </Info>
           </>
         )}

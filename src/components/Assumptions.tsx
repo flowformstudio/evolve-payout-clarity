@@ -39,6 +39,21 @@ export function Assumptions({ onClose }: { onClose: () => void }) {
               <strong>One property.</strong> Jordan owns one listing, so Option 2 has no property switcher. Scaling to more listings is a data-shape question (owner → listing → bookings), not a UI control.
             </li>
           </ul>
+          <h3>Final option</h3>
+          <ul>
+            <li>
+              <strong>Interactive rate calendar.</strong> Hover any night for the reason behind its price (rate type, season, discount, your share after the 15% fee). Click to keep the card open. Rates on nights outside this booking use the same seasonal model as Option 2.
+            </li>
+            <li>
+              <strong>One guest persona in the demo states.</strong> The Pending, Paid, Scheduled and Canceled demo states are four different bookings in the file (guests Adaeze Okafor, Tobias Ackerman, Olivia Trent and Booker Mathis). To keep the demo readable they are all shown as Adaeze Okafor. Booking IDs, dates, channels and every dollar amount are the file’s own.
+            </li>
+            <li>
+              <strong>Payout timing copy.</strong> Follows the README and the dataset’s <code>payoutTimingNote</code>: processed about 2 business days after check-in, landing 5 to 9 business days after check-in. The file’s own deposit dates are used as-is.
+            </li>
+            <li>
+              <strong>Canceled bookings.</strong> The file records a $0 payout and $0 fee. The refund wording is an assumption; the file does not say what the guest was charged or returned.
+            </li>
+          </ul>
           <h3>Judgement calls</h3>
           <ul>
             <li>Deposit dates in the file land two days after check-in, not the 5 to 9 business days the README describes. The prototype trusts the file’s dates.</li>
