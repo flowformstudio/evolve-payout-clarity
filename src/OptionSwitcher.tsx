@@ -1,22 +1,21 @@
 /** Floating pill to move between the design options in this repo. Prototype navigation only. */
-export function OptionSwitcher({ current }: { current: 1 | 2 | 3 | 4 | 5 }) {
+const OPTIONS: { key: 'final' | 1 | 2 | 3 | 4 | 5; href: string; label: string }[] = [
+  { key: 'final', href: '#/final', label: 'Final' },
+  { key: 1, href: '#/', label: '1' },
+  { key: 2, href: '#/v2', label: '2' },
+  { key: 3, href: '#/v3', label: '3' },
+  { key: 4, href: '#/v4', label: '4' },
+  { key: 5, href: '#/v5', label: '5' },
+]
+
+export function OptionSwitcher({ current }: { current: 'final' | 1 | 2 | 3 | 4 | 5 }) {
   return (
     <nav className="optsw" aria-label="Design options">
-      <a href="#/" className={current === 1 ? 'is-active' : ''} aria-current={current === 1 ? 'page' : undefined}>
-        Option 1
-      </a>
-      <a href="#/v2" className={current === 2 ? 'is-active' : ''} aria-current={current === 2 ? 'page' : undefined}>
-        Option 2
-      </a>
-      <a href="#/v3" className={current === 3 ? 'is-active' : ''} aria-current={current === 3 ? 'page' : undefined}>
-        Option 3
-      </a>
-      <a href="#/v4" className={current === 4 ? 'is-active' : ''} aria-current={current === 4 ? 'page' : undefined}>
-        Option 4
-      </a>
-      <a href="#/v5" className={current === 5 ? 'is-active' : ''} aria-current={current === 5 ? 'page' : undefined}>
-        Option 5
-      </a>
+      {OPTIONS.map((o) => (
+        <a key={String(o.key)} href={o.href} className={current === o.key ? 'is-active' : ''} aria-current={current === o.key ? 'page' : undefined}>
+          {o.label}
+        </a>
+      ))}
     </nav>
   )
 }

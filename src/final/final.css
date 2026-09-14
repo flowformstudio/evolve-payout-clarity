@@ -1,0 +1,765 @@
+/* FINAL option. Builds on v2.css tokens and v3 tile/btn3 styles. */
+.fin .fin-page {
+  max-width: 1120px;
+  gap: 18px;
+}
+.fin .fin-caret {
+  color: var(--ink-3);
+}
+.fin .fin-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-3);
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+.fin .fin-back:hover {
+  color: var(--ink);
+}
+
+/* guest header */
+.fin .fin-guest {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 2px 4px 8px;
+}
+.fin .fin-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--blue-bg);
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+.fin .fin-guest-main {
+  min-width: 0;
+}
+.fin .fin-guest-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.fin .fin-guest-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+.fin .fin-guest-meta {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink-2);
+  font-size: 15px;
+}
+.fin .fin-sep {
+  color: var(--line-2);
+}
+.fin .fin-dim {
+  color: var(--ink-3);
+}
+.fin .fin-channel {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.fin .fin-channel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #8a8f98;
+}
+.fin .fin-channel-dot.is-airbnb {
+  background: #ff385c;
+}
+.fin .fin-channel-dot.is-vrbo {
+  background: #245abc;
+}
+.fin .fin-channel-dot.is-evolve {
+  background: #1ab2c5;
+}
+.fin .fin-channel-dot.is-hopper {
+  background: #ff6a2c;
+}
+.fin .fin-guest-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.fin .fin-btn {
+  padding: 10px 16px;
+  font-size: 14.5px;
+  border-radius: 10px;
+}
+.fin .fin-btn-icon {
+  padding: 10px 12px;
+}
+
+/* hero */
+.fin .fin-hero {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 36px 40px 40px;
+  text-align: center;
+}
+.fin .fin-hero-label {
+  font-size: 16px;
+  color: var(--ink-3);
+}
+.fin .fin-hero-amount {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 6px 0 10px;
+  font-variant-numeric: tabular-nums;
+}
+.fin .fin-hero.is-canceled .fin-hero-amount {
+  color: var(--ink-3);
+}
+.fin .fin-hero-when {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.fin .fin-hero.is-pending .fin-when-text {
+  color: var(--amber);
+}
+.fin .fin-hero.is-paid .fin-when-text {
+  color: var(--green);
+}
+.fin .fin-hero.is-scheduled .fin-when-text {
+  color: var(--blue);
+}
+.fin .fin-hero.is-canceled .fin-when-text {
+  color: var(--red);
+}
+.fin .fin-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.fin .fin-chip.is-pending {
+  background: var(--amber-bg);
+  color: var(--amber);
+}
+.fin .fin-chip.is-paid {
+  background: var(--green-bg);
+  color: var(--green);
+}
+.fin .fin-chip.is-scheduled {
+  background: var(--blue-bg);
+  color: var(--blue);
+}
+.fin .fin-chip.is-canceled {
+  background: var(--red-bg);
+  color: var(--red);
+}
+@keyframes fin-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.fin .fin-spin {
+  animation: fin-spin 1.4s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fin .fin-spin {
+    animation: none;
+  }
+}
+.fin .fin-hero-bank {
+  margin-top: 10px;
+  color: var(--ink-3);
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.fin .fin-hero-bank strong {
+  color: var(--ink-2);
+  font-weight: 600;
+}
+
+/* steps */
+.fin .fin-steps {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto 0;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.fin .fin-step {
+  position: relative;
+  text-align: center;
+  padding-top: 40px;
+}
+.fin .fin-step-track {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  right: -50%;
+  height: 2px;
+  background: var(--line-2);
+}
+.fin .fin-step:last-child .fin-step-track {
+  display: none;
+}
+.fin .fin-step.is-done .fin-step-track {
+  background: var(--green);
+}
+.fin .fin-step-dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--line-2);
+  background: var(--paper);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  z-index: 1;
+}
+.fin .fin-step.is-done .fin-step-dot {
+  background: var(--green);
+  border-color: var(--green);
+}
+.fin .fin-step.is-current .fin-step-dot {
+  border: 3px solid var(--amber);
+}
+.fin .fin-hero.is-scheduled .fin-step.is-current .fin-step-dot {
+  border-color: var(--blue);
+}
+.fin .fin-hero.is-canceled .fin-step.is-current .fin-step-dot {
+  border-color: var(--red);
+}
+.fin .fin-step-date {
+  display: block;
+  color: var(--ink-3);
+  font-size: 14px;
+}
+.fin .fin-step-label {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 2px;
+}
+.fin .fin-step.is-todo .fin-step-label {
+  color: var(--ink-2);
+}
+
+/* two columns */
+.fin .fin-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.fin .fin-tile {
+  padding: 28px 32px 30px;
+  border-radius: 18px;
+}
+.fin .fin-h2 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
+/* ledger */
+.fin .fin-ledger {
+  font-variant-numeric: tabular-nums;
+}
+.fin .fin-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.fin .fin-row dt {
+  font-size: 16px;
+  color: var(--ink);
+}
+.fin .fin-row dt small {
+  display: block;
+  font-size: 13.5px;
+  color: var(--ink-3);
+  margin-top: 2px;
+}
+.fin .fin-row dd {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.fin .fin-row.is-fee dd {
+  color: var(--amber);
+}
+.fin .fin-fee-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.fin .fin-total {
+  border-bottom: 0;
+  margin-top: 14px;
+  padding: 16px 18px;
+  background: var(--green-bg);
+  border-radius: 10px;
+  align-items: center;
+}
+.fin .fin-total dt {
+  font-weight: 700;
+  font-size: 18px;
+}
+.fin .fin-total dd {
+  font-weight: 700;
+  font-size: 20px;
+}
+.fin .fin-total.is-plain {
+  background: transparent;
+  padding: 12px 0 0;
+  margin-top: 0;
+  border-top: 2px solid var(--line-2);
+  border-radius: 0;
+}
+.fin .fin-ledger-sm .fin-row {
+  padding: 10px 0;
+}
+.fin .fin-ledger-sm .fin-row dt,
+.fin .fin-ledger-sm .fin-row dd {
+  font-size: 14.5px;
+}
+.fin .fin-ledger-sm .fin-total dt,
+.fin .fin-ledger-sm .fin-total dd {
+  font-size: 16px;
+}
+
+/* stats */
+.fin .fin-stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 16px;
+}
+.fin .fin-stat-label {
+  display: block;
+  color: var(--ink-3);
+  font-size: 15px;
+}
+.fin .fin-stat-value {
+  display: block;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+
+/* accordion */
+.fin .fin-acc {
+  margin-top: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg);
+}
+.fin .fin-acc-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: 0;
+  padding: 16px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--ink);
+  border-radius: 12px;
+}
+.fin .fin-acc-btn:hover {
+  background: #f1efea;
+}
+.fin .fin-acc-body {
+  padding: 0 20px 18px;
+}
+.fin .fin-flow {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.fin .fin-flow > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font-size: 14px;
+  color: var(--ink-2);
+}
+.fin .fin-flow > div.is-you {
+  background: var(--green-bg);
+  border-color: #cfe4d7;
+  color: var(--green);
+  font-weight: 600;
+}
+
+/* ---------- interactive calendar ---------- */
+.fin .fc {
+  position: relative;
+  background: var(--bg);
+  border-radius: 14px;
+  padding: 16px 18px 14px;
+}
+.fin .fc-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.fin .fc-month {
+  font-size: 17px;
+  font-weight: 600;
+}
+.fin .fc-nav {
+  display: flex;
+  gap: 4px;
+}
+.fin .fc-navbtn {
+  background: none;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--ink-2);
+}
+.fin .fc-navbtn:hover {
+  background: #eeece7;
+}
+.fin .fc-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px 0;
+}
+.fin .fc-dow {
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-3);
+  padding-bottom: 6px;
+}
+.fin .fc-cell.is-empty {
+  display: block;
+}
+.fin .fc-day {
+  position: relative;
+  border: 0;
+  background: transparent;
+  padding: 7px 2px 6px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  cursor: pointer;
+  font: inherit;
+  color: var(--ink);
+  transition: background 0.12s ease, box-shadow 0.12s ease;
+}
+.fin .fc-num {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.fin .fc-rate {
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+.fin .fc-rate s {
+  margin-right: 3px;
+  opacity: 0.7;
+}
+.fin .fc-icon {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  opacity: 0.85;
+}
+.fin .fc-day:hover,
+.fin .fc-day.is-active {
+  background: #eeece7;
+}
+.fin .fc-day:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 1px;
+}
+.fin .fc-day.is-other .fc-num,
+.fin .fc-day.is-other .fc-rate {
+  color: var(--ink-3);
+}
+.fin .fc-day.is-blocked .fc-num {
+  color: var(--red);
+}
+.fin .fc-day.is-blocked .fc-rate {
+  color: #c98c89;
+}
+.fin .fc-day.is-booked {
+  background: var(--green);
+  color: #fff;
+  border-radius: 0;
+}
+.fin .fc-day.is-booked .fc-num {
+  font-weight: 700;
+}
+.fin .fc-day.is-booked .fc-rate {
+  color: #fff;
+  font-weight: 600;
+}
+.fin .fc-day.is-booked .fc-rate s {
+  color: #bfe0cf;
+}
+.fin .fc-day.is-start {
+  border-radius: 8px 0 0 8px;
+}
+.fin .fc-day.is-end {
+  border-radius: 0 8px 8px 0;
+}
+.fin .fc-day.is-start.is-end {
+  border-radius: 8px;
+}
+.fin .fc-day.is-booked:nth-child(7n + 1) {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.fin .fc-day.is-booked:nth-child(7n) {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.fin .fc-day.is-booked:hover,
+.fin .fc-day.is-booked.is-active {
+  background: var(--green);
+  box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 4px var(--green);
+}
+.fin .fc-day.is-pinned {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--ink);
+  z-index: 1;
+}
+.fin .fc-day.is-today {
+  box-shadow: inset 0 0 0 2px var(--amber), inset 0 0 0 4px #fff;
+}
+.fin .fc-day.is-today.is-booked {
+  box-shadow: inset 0 0 0 2px var(--amber), inset 0 0 0 4px #fff, inset 0 0 0 6px var(--green);
+}
+.fin .fc-hint {
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: var(--ink-3);
+  min-height: 18px;
+}
+.fin .fc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+.fin .fc-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.fin .fc-lg {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  display: inline-block;
+  background: var(--paper);
+  border: 1px solid var(--line-2);
+}
+.fin .fc-lg.is-booked {
+  background: var(--green);
+  border-color: var(--green);
+}
+.fin .fc-lg.is-other {
+  background: #dedcd6;
+  border-color: #dedcd6;
+}
+.fin .fc-lg.is-blocked {
+  background: var(--red-bg);
+  border-color: #e3a9a6;
+}
+
+/* day card */
+.fin .fc-card {
+  position: absolute;
+  z-index: 8;
+  width: 272px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 12px;
+  padding: 14px 16px 14px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+  font-size: 13px;
+  line-height: 1.45;
+  pointer-events: none;
+  animation: fc-in 0.12s ease-out;
+}
+.fin .fc-card.is-pinned {
+  pointer-events: auto;
+}
+@keyframes fc-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fin .fc-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+.fin .fc-card-date {
+  font-weight: 600;
+  font-size: 14px;
+}
+.fin .fc-card-kind {
+  color: #cfd3d9;
+  font-size: 12.5px;
+  margin-top: 1px;
+}
+.fin .fc-card.tone-booked .fc-card-kind {
+  color: #9fd8bb;
+}
+.fin .fc-card.tone-blocked .fc-card-kind {
+  color: #f0a9a5;
+}
+.fin .fc-card-close {
+  background: rgba(255, 255, 255, 0.12);
+  border: 0;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.fin .fc-card-price {
+  margin: 10px 0 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-variant-numeric: tabular-nums;
+}
+.fin .fc-card-price strong {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.fin .fc-card-price s {
+  color: #9aa0a8;
+}
+.fin .fc-card-per {
+  color: #9aa0a8;
+  font-size: 12px;
+}
+.fin .fc-card-rows {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 6px;
+}
+.fin .fc-card-rows > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 0;
+}
+.fin .fc-card-rows dt {
+  color: #9aa0a8;
+}
+.fin .fc-card-rows dd {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.fin .fc-card-rows .is-discount dd {
+  color: #9fd8bb;
+}
+.fin .fc-card-rows .is-you dd {
+  color: #ffd98a;
+  font-weight: 600;
+}
+.fin .fc-dim {
+  color: #9aa0a8;
+  font-weight: 400;
+}
+.fin .fc-card-why {
+  margin-top: 8px;
+  color: #cfd3d9;
+  font-size: 12.5px;
+}
+
+@media (max-width: 900px) {
+  .fin .fin-cols {
+    grid-template-columns: 1fr;
+  }
+  .fin .fin-steps {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .fin .fin-step {
+    text-align: left;
+    padding: 0 0 0 38px;
+  }
+  .fin .fin-step-track {
+    display: none;
+  }
+  .fin .fin-step-dot {
+    left: 0;
+    transform: none;
+  }
+  .fin .fin-hero-amount {
+    font-size: 48px;
+  }
+  .fin .fin-guest {
+    flex-wrap: wrap;
+  }
+  .fin .fin-guest-actions {
+    margin-left: 82px;
+  }
+}
