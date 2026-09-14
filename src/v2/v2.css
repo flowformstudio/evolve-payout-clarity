@@ -73,11 +73,10 @@
   color: var(--ink);
   text-decoration: none;
 }
-.v2 .wordmark-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--green);
+.v2 .wordmark-logo {
+  height: 22px;
+  width: auto;
+  display: block;
 }
 .v2 .shell-nav {
   display: flex;

@@ -81,8 +81,7 @@ export default function V4App() {
       <header className="shell">
         <div className="shell-inner">
           <a className="wordmark" href="#/v4" aria-label="Evolve owner portal">
-            <span className="wordmark-dot" aria-hidden />
-            Evolve
+            <img src="/evolve-logo.svg" alt="Evolve" className="wordmark-logo" />
           </a>
           <nav className="shell-nav" aria-label="Primary">
             {['Overview', 'Calendar', 'Bookings', 'Performance', 'Payouts'].map((n) => (

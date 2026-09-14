@@ -51,8 +51,8 @@ export default function App() {
     <div className="app">
       <header className="topbar">
         <div className="brand">
-          <span className="brand-mark" aria-hidden />
-          <span>Owner portal</span>
+          <img src="/evolve-logo.svg" alt="Evolve" className="brand-logo" />
+          <span className="brand-sub">Owner portal</span>
         </div>
         <nav className="topnav" aria-label="Primary">
           <a href="#" onClick={(e) => e.preventDefault()}>

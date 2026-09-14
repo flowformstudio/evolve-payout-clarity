@@ -113,11 +113,16 @@ button {
   font-weight: 600;
   letter-spacing: -0.01em;
 }
-.brand-mark {
-  width: 22px;
+.brand-logo {
   height: 22px;
-  border-radius: 7px;
-  background: linear-gradient(135deg, #2b8a63, #1b5c43);
+  width: auto;
+  display: block;
+}
+.brand-sub {
+  color: var(--ink-3);
+  font-weight: 500;
+  padding-left: 10px;
+  border-left: 1px solid var(--line-strong);
 }
 .topnav {
   display: flex;
