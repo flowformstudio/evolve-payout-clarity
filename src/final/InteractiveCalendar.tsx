@@ -149,6 +149,11 @@ export function InteractiveCalendar({ ds, booking }: { ds: Dataset; booking: Boo
           </Info>
         </span>
         <span className="fc-nav">
+          {month.y !== ci.getFullYear() || month.m !== ci.getMonth() ? (
+            <button className="fc-navbtn fc-back" onClick={() => setMonth({ y: ci.getFullYear(), m: ci.getMonth() })}>
+              This booking
+            </button>
+          ) : null}
           <button className="fc-navbtn" aria-label="Previous month" onClick={() => setMonth(({ y, m }) => (m === 0 ? { y: y - 1, m: 11 } : { y, m: m - 1 }))}>
             <ChevronLeft size={16} />
           </button>

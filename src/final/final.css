@@ -551,6 +551,7 @@
 }
 .fin .fc-rate s {
   margin-right: 3px;
+  font-size: 10px;
   opacity: 0.7;
 }
 .fin .fc-icon {
@@ -1030,4 +1031,51 @@
 .fin .fc-day.is-booked:hover + .fc-day.is-booked,
 .fin .fc-day.is-booked.is-active + .fc-day.is-booked {
   border-left-color: var(--green);
+}
+
+/* jump back to the booking month */
+.fin .fc-navbtn.fc-back {
+  width: auto;
+  padding: 0 10px;
+  margin-right: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  border-color: var(--green-bg);
+  background: var(--green-bg);
+}
+.fin .fc-navbtn.fc-back:hover {
+  background: #c9e6d5;
+}
+
+/* one hover language for every button: like "Message guest" */
+.fin .fc-navbtn,
+.fin .fc-navbtn.fc-back,
+.fin .fc-card-close,
+.fin .shell-link {
+  background: transparent;
+  border: 1px solid var(--line-2);
+  color: var(--ink);
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+.fin .fc-navbtn.fc-back {
+  color: var(--ink);
+  font-weight: 500;
+}
+.fin .fin-acc-btn {
+  padding: 6px 10px;
+  margin-left: -10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+.fin .fc-navbtn:hover,
+.fin .fc-navbtn.fc-back:hover,
+.fin .fc-card-close:hover,
+.fin .shell-link:hover,
+.fin .fin-acc-btn:hover,
+.fin .fin-btn:hover {
+  background: var(--bg);
+  border-color: var(--line-2);
+  text-decoration: none;
 }
