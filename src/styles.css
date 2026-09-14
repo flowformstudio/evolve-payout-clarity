@@ -315,10 +315,13 @@ button {
   background: var(--you-bg);
   color: var(--you);
 }
-.pill-pending,
-.pill-in_progress {
+.pill-pending {
   background: var(--pending-bg);
   color: var(--pending);
+}
+.pill-in_progress {
+  background: var(--you-bg);
+  color: var(--you);
 }
 .pill-scheduled,
 .pill-upcoming {
