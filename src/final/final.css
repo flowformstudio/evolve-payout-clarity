@@ -1189,3 +1189,114 @@
   letter-spacing: -0.01em;
   color: var(--ink);
 }
+/* month arrows: outline only on hover */
+.fin .fc-navbtn:not(.fc-back) {
+  border-color: transparent;
+}
+.fin .fc-navbtn:not(.fc-back):hover {
+  border-color: var(--line-2);
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 600px) {
+  .fin .fin-guest {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    column-gap: 12px;
+    row-gap: 10px;
+    align-items: center;
+  }
+  .fin .fin-avatar {
+    width: 44px;
+    height: 44px;
+  }
+  .fin .fin-guest-name {
+    font-size: 20px;
+  }
+  .fin .fin-guest-row {
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+  .fin .fin-guest-meta {
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    font-size: 13px;
+    margin-top: 2px;
+  }
+  .fin .fin-property {
+    white-space: nowrap;
+  }
+  .fin .fin-guest-actions {
+    grid-column: 1 / -1;
+    margin-left: 0;
+  }
+  .fin .fin-guest-actions .fin-btn:first-child {
+    flex: 1;
+    justify-content: center;
+  }
+  .fin .fin-hero {
+    padding: 22px 16px 18px;
+  }
+  .fin .fin-hero-amount {
+    font-size: 42px;
+  }
+  .fin .fin-hero-when {
+    flex-wrap: wrap;
+    font-size: 18px;
+    line-height: 22px;
+    gap: 8px 10px;
+  }
+  .fin .fin-hero-bank {
+    display: block;
+    line-height: 1.5;
+  }
+  .fin .fin-hero-bank strong {
+    white-space: normal;
+  }
+  .fin .fin-tile {
+    padding: 18px 16px;
+  }
+  .fin .fin-stats {
+    column-gap: 24px;
+  }
+  .fin .fin-stats > div {
+    min-width: 0;
+  }
+  .fin .fin-stat-value {
+    font-size: 28px;
+  }
+  .fin .fc-grid {
+    gap: 3px;
+  }
+  .fin .fc-day {
+    min-height: 48px;
+    padding: 6px 1px 5px;
+  }
+  .fin .fc-num {
+    font-size: 11px;
+  }
+  .fin .fc-rate {
+    font-size: 11px;
+  }
+  .fin .fc-rate s {
+    display: none;
+  }
+  .fin .fin-acc-row {
+    flex-wrap: wrap;
+  }
+  .fin .fin-legend-label {
+    display: none;
+  }
+  .fin .fin-row dd {
+    white-space: nowrap;
+  }
+  .v2.fin .demo-label {
+    display: none;
+  }
+  .v2.fin .demo {
+    bottom: 68px;
+    right: 12px;
+    left: 12px;
+    max-width: none;
+  }
+}
