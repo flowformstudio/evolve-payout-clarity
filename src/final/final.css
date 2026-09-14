@@ -1093,3 +1093,37 @@
 .fin .fc-day.is-other .fc-rate {
   color: var(--ink-3);
 }
+
+/* price is the point of the calendar: make it read first */
+.fin .fc-rate {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.fin .fc-num {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-2);
+}
+.fin .fc-day.is-other .fc-rate {
+  color: var(--ink);
+}
+.fin .fc-day.is-other .fc-num {
+  color: var(--ink-3);
+}
+.fin .fc-day.is-blocked .fc-rate {
+  color: var(--red);
+}
+.fin .fc-day.is-blocked .fc-num {
+  color: #b4605c;
+}
+.fin .fc-day.is-booked .fc-rate {
+  color: #fff;
+}
+.fin .fc-day.is-booked .fc-num {
+  color: rgba(255, 255, 255, 0.8);
+}
+.fin .fc-rate s {
+  font-size: 10px;
+  font-weight: 400;
+}
