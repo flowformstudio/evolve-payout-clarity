@@ -916,8 +916,8 @@
 }
 .fin .fc-day.is-booked:hover,
 .fin .fc-day.is-booked.is-active {
-  background: #14563b;
-  border-color: #14563b;
+  background: #18774f;
+  border-color: #18774f;
   box-shadow: none;
 }
 .fin .fc-day.is-pinned {
