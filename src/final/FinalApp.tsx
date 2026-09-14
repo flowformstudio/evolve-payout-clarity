@@ -7,7 +7,7 @@ import { phaseOf } from '../lib/derive'
 import { Info } from '../v2/components/Info'
 import { BookingStateSwitcher, type DemoState } from '../v2/components/BookingStateSwitcher'
 import { Assumptions } from '../components/Assumptions'
-import { CalendarLegend, InteractiveCalendar } from './InteractiveCalendar'
+import { InteractiveCalendar } from './InteractiveCalendar'
 import '../v2/v2.css'
 import '../v3/v3.css'
 import './final.css'
@@ -313,9 +313,6 @@ function GuestBookingInfo({ ds, booking }: { ds: Dataset; booking: Booking }) {
   const taxes = booking.lineItems.filter((l) => l.type === 'tax')
   const taxTotal = round2(taxes.reduce((s, t) => s + t.amount, 0))
   const guestTotal = round2(base + cleaning + taxTotal)
-  const canceled = booking.payout!.status === 'canceled'
-  const fee = canceled ? round2(base * ds.listing.managementFeeRate) : booking.payout!.managementFee
-  const payout = canceled ? round2(base + cleaning - fee) : booking.payout!.amount
   const site = booking.bookingSite === 'Evolve' ? 'Evolve' : booking.bookingSite
 
   return (
@@ -342,10 +339,6 @@ function GuestBookingInfo({ ds, booking }: { ds: Dataset; booking: Booking }) {
             <span>Guest price breakdown</span>
             <ChevronDown size={18} className={`chev ${open ? 'is-open' : ''}`} aria-hidden />
           </button>
-          <span className="fin-legend">
-            <span className="fin-legend-label">What the colors mean</span>
-            <CalendarLegend />
-          </span>
         </div>
         {open ? (
           <div id="gpb" className="fin-acc-body">
@@ -365,26 +358,11 @@ function GuestBookingInfo({ ds, booking }: { ds: Dataset; booking: Booking }) {
                 </dt>
                 <dd>{money(taxTotal)}</dd>
               </div>
-              <div className="fin-row fin-total is-plain">
+              <div className="fin-row fin-total">
                 <dt>Guest total</dt>
                 <dd>{money(guestTotal)}</dd>
               </div>
             </dl>
-            <div className="fin-flow">
-              <div>
-                <span>Taxes collected and remitted</span>
-                <span className="num">{money(taxTotal)}</span>
-              </div>
-              <div>
-                <span>Evolve management fee</span>
-                <span className="num">{money(fee)}</span>
-              </div>
-              <div className="is-you">
-                <span>{canceled ? 'You would have received' : 'You receive'}</span>
-                <span className="num">{money(payout)}</span>
-              </div>
-            </div>
-            <p className="sec-note">Occupancy taxes go to the State of Texas, the City of Austin and Travis County. Evolve remits them for the guest. They aren’t part of your earnings and aren’t deducted from them.</p>
           </div>
         ) : null}
       </div>

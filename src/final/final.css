@@ -1300,3 +1300,13 @@
     max-width: none;
   }
 }
+
+/* guest ledger total: same treatment as the owner payout total, slightly smaller */
+.fin .fin-ledger-sm .fin-total {
+  margin-top: 8px;
+  padding: 20px 0 4px;
+}
+.fin .fin-ledger-sm .fin-total dt,
+.fin .fin-ledger-sm .fin-total dd {
+  font-size: 18px;
+}
