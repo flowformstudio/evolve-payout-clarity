@@ -1015,3 +1015,19 @@
   background: var(--paper);
   box-shadow: inset 0 0 0 2px var(--amber);
 }
+
+/* every tile rounded, including the booking band and today */
+.fin .fc-day.is-booked,
+.fin .fc-day.is-start,
+.fin .fc-day.is-end,
+.fin .fc-day.is-booked:not(.is-start):not(.is-end),
+.fin .fc-day.is-today {
+  border-radius: 8px;
+}
+.fin .fc-day.is-booked + .fc-day.is-booked {
+  border-left-color: var(--green);
+}
+.fin .fc-day.is-booked:hover + .fc-day.is-booked,
+.fin .fc-day.is-booked.is-active + .fc-day.is-booked {
+  border-left-color: var(--green);
+}
