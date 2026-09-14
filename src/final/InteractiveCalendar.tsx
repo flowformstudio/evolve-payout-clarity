@@ -1,8 +1,9 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
-import { ChevronLeft, ChevronRight, DoorOpen, X } from 'lucide-react'
+import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import type { Booking, Dataset } from '../lib/types'
 import { addDays, money, parseISO, toISO } from '../lib/format'
 import { seasonFor } from '../lib/derive'
+import { Info } from '../v2/components/Info'
 import { isWeekendNight, listRateFor, nightlyRatesFor, type NightRate } from '../v2/prototype-additions'
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -127,6 +128,25 @@ export function InteractiveCalendar({ ds, booking }: { ds: Dataset; booking: Boo
       <div className="fc-head">
         <span className="fc-month">
           {MONTHS[m]} {y}
+          <Info label="What the calendar colors mean">
+            <span className="fc-legend-title">What the colors mean</span>
+            <span className="fc-legend-row">
+              <i className="fc-lg is-booked" /> This booking’s nights
+            </span>
+            <span className="fc-legend-row">
+              <i className="fc-lg is-open" /> Open, listed at that price
+            </span>
+            <span className="fc-legend-row">
+              <i className="fc-lg is-other" /> Booked by another guest
+            </span>
+            <span className="fc-legend-row">
+              <i className="fc-lg is-blocked" /> Blocked by you
+            </span>
+            <span className="fc-legend-row">
+              <i className="fc-lg is-today" /> Today
+            </span>
+            <span className="fc-legend-foot">Hover a date for the reason behind its price. Click to keep the card open.</span>
+          </Info>
         </span>
         <span className="fc-nav">
           <button className="fc-navbtn" aria-label="Previous month" onClick={() => setMonth(({ y, m }) => (m === 0 ? { y: y - 1, m: 11 } : { y, m: m - 1 }))}>
@@ -175,7 +195,6 @@ export function InteractiveCalendar({ ds, booking }: { ds: Dataset; booking: Boo
               <span className="fc-rate">
                 {c.night?.discount ? <s>{Math.round(c.listRate)}</s> : null}${Math.round(c.rate)}
               </span>
-              {c.date === booking.stay.checkIn ? <DoorOpen size={12} className="fc-icon" aria-hidden /> : null}
             </button>
           )
         })}

@@ -927,5 +927,91 @@
   box-shadow: inset 0 0 0 2px var(--amber);
 }
 .fin .fc-day.is-today.is-booked {
-  box-shadow: inset 0 0 0 2px var(--amber), inset 0 0 0 4px var(--green);
+  box-shadow: none;
+  position: relative;
+}
+.fin .fc-day.is-today.is-booked::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+}
+.fin .fc-day.is-booked .fc-num,
+.fin .fc-day.is-booked .fc-rate {
+  color: #fff;
+}
+.fin .fc-day.is-booked .fc-rate s {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* calendar legend popover (white, like the day card) */
+.fin .fc-month {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.fin .fc-month .info-btn {
+  color: var(--ink-3);
+}
+.fin .info-pop {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.14), 0 2px 6px rgba(0, 0, 0, 0.06);
+  width: 260px;
+  font-weight: 400;
+  font-size: 13px;
+}
+.fin .info-pop .info-math {
+  color: var(--ink-3);
+}
+.fin .fc-legend-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.fin .fc-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 3px 0;
+  color: var(--ink-2);
+}
+.fin .fc-legend-foot {
+  display: block;
+  margin-top: 8px;
+  color: var(--ink-3);
+  font-size: 12px;
+}
+.fin .fc-lg {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  display: inline-block;
+  flex-shrink: 0;
+  border: 1px solid transparent;
+}
+.fin .fc-lg.is-booked {
+  background: var(--green);
+}
+.fin .fc-lg.is-open {
+  background: var(--paper);
+  border-color: var(--line-2);
+}
+.fin .fc-lg.is-other {
+  background: var(--paper);
+  border-color: transparent;
+  box-shadow: inset 0 0 0 3px #d9dbe0;
+}
+.fin .fc-lg.is-blocked {
+  background: var(--red-bg);
+  border-color: #e3a9a6;
+}
+.fin .fc-lg.is-today {
+  background: var(--paper);
+  box-shadow: inset 0 0 0 2px var(--amber);
 }
