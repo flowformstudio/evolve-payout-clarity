@@ -19,6 +19,7 @@ const ds = raw as unknown as Dataset
  * what the guest booked, with an interactive month calendar that explains every night's price.
  */
 const DEFAULT_ID = '15932931'
+const PERSONA = { name: 'Adaeze Okafor', photo: '/img/avatar-adaeze.png' }
 const DEMO_STATES: DemoState[] = [
   { key: 'pending', label: 'Pending', id: '15932931' },
   { key: 'paid', label: 'Paid', id: '15415011' },
@@ -32,7 +33,6 @@ function idFromHash(): string | null {
   const m = location.hash.match(/#\/final\/bookings\/([^/?]+)/)
   return m ? decodeURIComponent(m[1]) : null
 }
-const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).join('').toUpperCase()
 
 export default function FinalApp() {
   const [id, setId] = useState<string>(() => idFromHash() ?? DEFAULT_ID)
@@ -57,7 +57,8 @@ export default function FinalApp() {
   const booking = useMemo(() => ds.bookings.find((b) => b.id === id) ?? ds.bookings[0], [id])
   const blocked = booking.status === 'blocked'
   const phase = phaseOf(booking)
-  const g = booking.guest
+  // One persona across the demo states, so the page reads as the same guest at different points in time.
+  const g = booking.guest ? PERSONA : null
 
   return (
     <div className="v2 v3 fin">
@@ -97,11 +98,11 @@ export default function FinalApp() {
         </a>
 
         <header className="fin-guest">
-          {g && booking.id === DEFAULT_ID ? (
-            <img className="fin-avatar fin-avatar-photo" src="/img/avatar-adaeze.png" alt="" />
+          {g ? (
+            <img className="fin-avatar fin-avatar-photo" src={g.photo} alt="" />
           ) : (
             <span className="fin-avatar" aria-hidden>
-              {g ? initials(g.name) : '—'}
+              —
             </span>
           )}
           <div className="fin-guest-main">
