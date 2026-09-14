@@ -922,3 +922,24 @@ html.is-v2 body {
   overflow: auto;
   height: auto;
 }
+
+/* Capture mode (?capture): no fixed pills, no inner scroll panes, so a page capture gets the whole screen. */
+html.is-capture .optsw,
+html.is-capture .demo {
+  display: none;
+}
+html.is-capture,
+html.is-capture body {
+  overflow: visible;
+  height: auto;
+}
+html.is-capture .app,
+html.is-capture .layout,
+html.is-capture .rail,
+html.is-capture .main {
+  height: auto;
+  overflow: visible;
+}
+html.is-capture .layout {
+  align-items: start;
+}

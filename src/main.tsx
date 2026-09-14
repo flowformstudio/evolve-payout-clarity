@@ -16,13 +16,17 @@ function Root() {
     window.addEventListener('hashchange', on)
     return () => window.removeEventListener('hashchange', on)
   }, [])
-  const v2 = hash.startsWith('#/v2')
-  const v3 = hash.startsWith('#/v3')
-  const v4 = hash.startsWith('#/v4')
-  const v5 = hash.startsWith('#/v5')
+  // `?opt=v2` mirrors the hash route so page-capture tools that own the hash can still pick an option.
+  const opt = new URLSearchParams(location.search).get('opt') ?? ''
+  const capture = new URLSearchParams(location.search).has('capture')
+  const v2 = hash.startsWith('#/v2') || opt === 'v2'
+  const v3 = hash.startsWith('#/v3') || opt === 'v3'
+  const v4 = hash.startsWith('#/v4') || opt === 'v4'
+  const v5 = hash.startsWith('#/v5') || opt === 'v5'
   useEffect(() => {
     document.documentElement.classList.toggle('is-v2', v2 || v3 || v4 || v5)
-  }, [v2, v3, v4, v5])
+    document.documentElement.classList.toggle('is-capture', capture)
+  }, [v2, v3, v4, v5, capture])
   return (
     <>
       {v5 ? <V5App /> : v4 ? <V4App /> : v3 ? <V3App /> : v2 ? <V2App /> : <App />}
