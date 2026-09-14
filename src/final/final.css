@@ -755,7 +755,7 @@
   font-size: 12px;
 }
 .fin .fc-card-rows {
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--line);
   padding-top: 6px;
 }
 .fin .fc-card-rows > div {
