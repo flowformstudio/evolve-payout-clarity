@@ -184,22 +184,7 @@ export function InteractiveCalendar({ ds, booking }: { ds: Dataset; booking: Boo
       {activeInfo && pos ? (
         <DayCard info={activeInfo} booking={booking} ds={ds} pos={pos} pinned={pinned === activeInfo.date} onClose={() => setPinned(null)} />
       ) : null}
-      <p className="fc-hint" aria-live="polite">{pinned ? 'Press Esc or click elsewhere to close.' : 'Hover a date to see why it’s priced that way. Click to keep it open.'}</p>
 
-      <div className="fc-legend" aria-hidden>
-        <span>
-          <i className="fc-lg is-booked" /> This booking
-        </span>
-        <span>
-          <i className="fc-lg is-other" /> Other guests
-        </span>
-        <span>
-          <i className="fc-lg is-blocked" /> Blocked by you
-        </span>
-        <span>
-          <i className="fc-lg is-open" /> Open · list price
-        </span>
-      </div>
     </div>
   )
 }
@@ -289,14 +274,6 @@ function DayCard({ info, booking, ds, pos, pinned, onClose }: CardProps) {
         ) : null}
       </dl>
 
-      <p className="fc-card-why">
-        {disc
-          ? disc.reason
-          : weekend
-            ? `Friday and Saturday nights are priced above weeknights. ${season.note}`
-            : season.note}
-      </p>
-      {info.occ?.kind === 'blocked' ? <p className="fc-card-why">You blocked this night. Unblocking would list it at {money(info.rate)}.</p> : null}
     </div>
   )
 }

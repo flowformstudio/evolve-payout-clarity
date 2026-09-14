@@ -97,23 +97,31 @@ export default function FinalApp() {
         </a>
 
         <header className="fin-guest">
-          <span className="fin-avatar" aria-hidden>
-            {g ? initials(g.name) : '—'}
-          </span>
+          {g && booking.id === DEFAULT_ID ? (
+            <img className="fin-avatar fin-avatar-photo" src="/img/avatar-adaeze.png" alt="" />
+          ) : (
+            <span className="fin-avatar" aria-hidden>
+              {g ? initials(g.name) : '—'}
+            </span>
+          )}
           <div className="fin-guest-main">
             <div className="fin-guest-row">
               <h1 className="fin-guest-name">{g?.name ?? 'Owner block'}</h1>
               <span className={`bh-status is-${phase}`}>{STATUS[phase]}</span>
             </div>
             <p className="fin-guest-meta">
-              <span>{ds.listing.name}</span>
+              <span className="fin-property">{ds.listing.name}</span>
               {booking.bookingSite ? (
                 <>
                   <span className="fin-sep" aria-hidden>
                     |
                   </span>
                   <span className="fin-channel">
-                    <i className={`fin-channel-dot is-${booking.bookingSite.toLowerCase().replace('.', '')}`} aria-hidden />
+                    {booking.bookingSite === 'Airbnb' ? (
+                      <img className="fin-channel-logo" src="/img/channel-airbnb.png" alt="" />
+                    ) : (
+                      <i className={`fin-channel-dot is-${booking.bookingSite.toLowerCase().replace('.', '')}`} aria-hidden />
+                    )}
                     {booking.bookingSite === 'Evolve' ? 'Evolve direct' : booking.bookingSite}
                   </span>
                 </>
@@ -336,7 +344,7 @@ function GuestBookingInfo({ ds, booking }: { ds: Dataset; booking: Booking }) {
 
       <div className="fin-acc">
         <button className="fin-acc-btn" aria-expanded={open} aria-controls="gpb" onClick={() => setOpen((v) => !v)}>
-          Guest price breakdown
+          <span>Guest price breakdown</span>
           <ChevronDown size={18} className={`chev ${open ? 'is-open' : ''}`} aria-hidden />
         </button>
         {open ? (

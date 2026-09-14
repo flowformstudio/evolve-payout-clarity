@@ -1,4 +1,8 @@
-/* FINAL option. Builds on v2.css tokens and v3 tile/btn3 styles. */
+/* FINAL option. Builds on v2.css tokens and v3 tile/btn3 styles. Measurements follow the Figma "Round 4" design. */
+.fin {
+  --amber: #d45b20;
+  --card-shadow: 0 5px 4.5px rgba(0, 0, 0, 0.03);
+}
 .fin .fin-page {
   max-width: 1120px;
   gap: 18px;
@@ -27,8 +31,8 @@
   padding: 2px 4px 8px;
 }
 .fin .fin-avatar {
-  width: 64px;
-  height: 64px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   background: var(--blue-bg);
   color: var(--blue);
@@ -39,8 +43,22 @@
   letter-spacing: -0.02em;
   flex-shrink: 0;
 }
+.fin .fin-avatar-photo {
+  object-fit: cover;
+  background: none;
+}
 .fin .fin-guest-main {
   min-width: 0;
+}
+.fin .fin-property {
+  font-weight: 700;
+  color: var(--ink-2);
+}
+.fin .fin-channel-logo {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .fin .fin-guest-row {
   display: flex;
@@ -48,9 +66,10 @@
   gap: 12px;
 }
 .fin .fin-guest-name {
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 30px;
 }
 .fin .fin-guest-meta {
   margin-top: 4px;
@@ -70,8 +89,9 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-weight: 500;
-  color: var(--ink);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink-2);
 }
 .fin .fin-channel-dot {
   width: 10px;
@@ -98,31 +118,35 @@
   flex-shrink: 0;
 }
 .fin .fin-btn {
-  padding: 10px 16px;
-  font-size: 14.5px;
-  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: 8px;
 }
 .fin .fin-btn-icon {
   padding: 10px 12px;
+  border-radius: 10px;
 }
 
 /* hero */
 .fin .fin-hero {
   background: var(--paper);
-  border: 1px solid var(--line);
+  border: 0;
   border-radius: 18px;
   padding: 36px 40px 40px;
   text-align: center;
+  box-shadow: var(--card-shadow);
 }
 .fin .fin-hero-label {
   font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--ink-3);
 }
 .fin .fin-hero-amount {
-  font-size: 64px;
+  font-size: 56px;
   font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.05;
+  letter-spacing: -0.035em;
+  line-height: 59px;
   margin: 6px 0 10px;
   font-variant-numeric: tabular-nums;
 }
@@ -134,9 +158,10 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 600;
   letter-spacing: -0.01em;
+  line-height: 26px;
 }
 .fin .fin-hero.is-pending .fin-when-text {
   color: var(--amber);
@@ -154,7 +179,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   padding: 5px 12px;
   border-radius: 999px;
@@ -191,7 +216,7 @@
 .fin .fin-hero-bank {
   margin-top: 10px;
   color: var(--ink-3);
-  font-size: 15px;
+  font-size: 13px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,7 +224,7 @@
 }
 .fin .fin-hero-bank strong {
   color: var(--ink-2);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* steps */
@@ -261,13 +286,15 @@
 .fin .fin-step-date {
   display: block;
   color: var(--ink-3);
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: -4px;
 }
 .fin .fin-step-label {
   display: block;
   font-weight: 600;
   font-size: 15px;
-  margin-top: 2px;
+  padding-top: 2px;
 }
 .fin .fin-step.is-todo .fin-step-label {
   color: var(--ink-2);
@@ -283,11 +310,14 @@
 .fin .fin-tile {
   padding: 28px 32px 30px;
   border-radius: 18px;
+  border: 0;
+  box-shadow: var(--card-shadow);
 }
 .fin .fin-h2 {
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 26px;
   margin-bottom: 18px;
 }
 
@@ -303,19 +333,26 @@
   padding: 16px 0;
   border-bottom: 1px solid var(--line);
 }
+.fin .fin-row {
+  border-bottom: 0;
+}
 .fin .fin-row dt {
   font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--ink);
 }
 .fin .fin-row dt small {
   display: block;
-  font-size: 13.5px;
+  font-size: 13px;
+  font-weight: 400;
   color: var(--ink-3);
   margin-top: 2px;
 }
 .fin .fin-row dd {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   white-space: nowrap;
 }
 .fin .fin-row.is-fee dd {
@@ -329,19 +366,22 @@
 }
 .fin .fin-total {
   border-bottom: 0;
+  border-top: 1px solid var(--line);
   margin-top: 14px;
-  padding: 16px 18px;
-  background: var(--green-bg);
-  border-radius: 10px;
+  padding: 30px 0 16px;
+  background: transparent;
+  border-radius: 0;
   align-items: center;
 }
 .fin .fin-total dt {
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: -0.02em;
 }
 .fin .fin-total dd {
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: -0.02em;
 }
 .fin .fin-total.is-plain {
   background: transparent;
@@ -380,39 +420,35 @@
 }
 .fin .fin-stat-value {
   display: block;
-  font-size: 34px;
+  font-size: 37px;
   font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
+  letter-spacing: -0.035em;
+  line-height: 53px;
   font-variant-numeric: tabular-nums;
 }
 
 /* accordion */
 .fin .fin-acc {
   margin-top: 16px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--bg);
 }
 .fin .fin-acc-btn {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
   align-items: center;
+  gap: 11px;
   background: none;
   border: 0;
-  padding: 16px 20px;
-  font-size: 17px;
+  padding: 0;
+  font-size: 16px;
   font-weight: 600;
+  letter-spacing: -0.01em;
   cursor: pointer;
   color: var(--ink);
-  border-radius: 12px;
 }
 .fin .fin-acc-btn:hover {
-  background: #f1efea;
+  text-decoration: underline;
 }
 .fin .fin-acc-body {
-  padding: 0 20px 18px;
+  padding: 12px 0 0;
 }
 .fin .fin-flow {
   margin-top: 14px;
@@ -443,6 +479,7 @@
   background: var(--bg);
   border-radius: 14px;
   padding: 16px 18px 14px;
+  width: 100%;
 }
 .fin .fc-head {
   display: flex;
@@ -451,8 +488,9 @@
   margin-bottom: 10px;
 }
 .fin .fc-month {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
+  letter-spacing: -0.01em;
 }
 .fin .fc-nav {
   display: flex;
@@ -543,6 +581,7 @@
   background: var(--green);
   color: #fff;
   border-radius: 0;
+  box-shadow: inset 0 0 0 1px var(--bg);
 }
 .fin .fc-day.is-booked .fc-num {
   font-weight: 700;
@@ -574,7 +613,7 @@
 .fin .fc-day.is-booked:hover,
 .fin .fc-day.is-booked.is-active {
   background: var(--green);
-  box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 4px var(--green);
+  box-shadow: inset 0 0 0 1px var(--bg), inset 0 0 0 3px #fff;
 }
 .fin .fc-day.is-pinned {
   box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--ink);
@@ -631,11 +670,12 @@
   position: absolute;
   z-index: 8;
   width: 272px;
-  background: var(--ink);
-  color: #fff;
+  background: var(--paper);
+  color: var(--ink);
   border-radius: 12px;
   padding: 14px 16px 14px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.14), 0 2px 6px rgba(0, 0, 0, 0.06);
   font-size: 13px;
   line-height: 1.45;
   pointer-events: none;
@@ -664,20 +704,23 @@
   font-size: 14px;
 }
 .fin .fc-card-kind {
-  color: #cfd3d9;
-  font-size: 12.5px;
+  color: var(--ink-3);
+  font-size: 12px;
   margin-top: 1px;
 }
 .fin .fc-card.tone-booked .fc-card-kind {
-  color: #9fd8bb;
+  color: var(--green);
 }
 .fin .fc-card.tone-blocked .fc-card-kind {
-  color: #f0a9a5;
+  color: var(--red);
+}
+.fin .fc-card.tone-other .fc-card-kind {
+  color: var(--blue);
 }
 .fin .fc-card-close {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--bg);
   border: 0;
-  color: #fff;
+  color: var(--ink-2);
   width: 24px;
   height: 24px;
   border-radius: 6px;
@@ -698,15 +741,20 @@
   font-weight: 700;
   letter-spacing: -0.02em;
 }
+.fin .fc-card-price strong {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
 .fin .fc-card-price s {
-  color: #9aa0a8;
+  color: var(--ink-3);
+  font-size: 13px;
 }
 .fin .fc-card-per {
-  color: #9aa0a8;
+  color: var(--ink-3);
   font-size: 12px;
 }
 .fin .fc-card-rows {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid var(--ink);
   padding-top: 6px;
 }
 .fin .fc-card-rows > div {
@@ -716,27 +764,22 @@
   padding: 4px 0;
 }
 .fin .fc-card-rows dt {
-  color: #9aa0a8;
+  color: var(--ink-3);
 }
 .fin .fc-card-rows dd {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 .fin .fc-card-rows .is-discount dd {
-  color: #9fd8bb;
+  color: var(--green);
 }
 .fin .fc-card-rows .is-you dd {
-  color: #ffd98a;
+  color: var(--amber);
   font-weight: 600;
 }
 .fin .fc-dim {
-  color: #9aa0a8;
+  color: var(--ink-3);
   font-weight: 400;
-}
-.fin .fc-card-why {
-  margin-top: 8px;
-  color: #cfd3d9;
-  font-size: 12.5px;
 }
 
 @media (max-width: 900px) {
