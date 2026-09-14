@@ -37,7 +37,10 @@ export function InteractiveCalendar({ ds, booking }: { ds: Dataset; booking: Boo
   const gridRef = useRef<HTMLDivElement>(null)
   const today = ds.meta.todayForExercise
 
+  const lastBooking = useRef(booking.id)
   useEffect(() => {
+    if (lastBooking.current === booking.id) return // first mount (also under StrictMode's double run): keep a URL-pinned card
+    lastBooking.current = booking.id
     setMonth({ y: ci.getFullYear(), m: ci.getMonth() })
     setPinned(null)
     setHover(null)
