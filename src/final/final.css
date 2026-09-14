@@ -1183,3 +1183,9 @@
   border-radius: 50%;
   background: var(--amber);
 }
+.fin .fc-month {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
