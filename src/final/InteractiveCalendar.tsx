@@ -32,7 +32,8 @@ export function InteractiveCalendar({ ds, booking }: { ds: Dataset; booking: Boo
   const ci = parseISO(booking.stay.checkIn)
   const [month, setMonth] = useState({ y: ci.getFullYear(), m: ci.getMonth() })
   const [hover, setHover] = useState<string | null>(null)
-  const [pinned, setPinned] = useState<string | null>(null)
+  // `?pin=YYYY-MM-DD` opens a day card on load (used for design captures).
+  const [pinned, setPinned] = useState<string | null>(() => new URLSearchParams(location.search).get('pin'))
   const gridRef = useRef<HTMLDivElement>(null)
   const today = ds.meta.todayForExercise
 
