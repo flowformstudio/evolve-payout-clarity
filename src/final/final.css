@@ -1000,13 +1000,12 @@
   background: var(--green);
 }
 .fin .fc-lg.is-open {
-  background: var(--paper);
-  border-color: var(--line-2);
+  background: transparent;
+  border-color: transparent;
 }
 .fin .fc-lg.is-other {
   background: var(--paper);
-  border-color: transparent;
-  box-shadow: inset 0 0 0 3px #d9dbe0;
+  border-color: var(--line-2);
 }
 .fin .fc-lg.is-blocked {
   background: var(--red-bg);
@@ -1078,4 +1077,19 @@
   background: var(--bg);
   border-color: var(--line-2);
   text-decoration: none;
+}
+
+/* booked-by-others outlined, open dates plain */
+.fin .fc-day:not(.is-booked):not(.is-other):not(.is-blocked) {
+  border-color: transparent;
+}
+.fin .fc-day.is-other {
+  border-color: var(--line-2);
+  background: var(--paper);
+}
+.fin .fc-day.is-other .fc-num {
+  color: var(--ink-2);
+}
+.fin .fc-day.is-other .fc-rate {
+  color: var(--ink-3);
 }

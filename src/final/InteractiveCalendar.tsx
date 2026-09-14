@@ -134,10 +134,10 @@ export function InteractiveCalendar({ ds, booking }: { ds: Dataset; booking: Boo
               <i className="fc-lg is-booked" /> This booking’s nights
             </span>
             <span className="fc-legend-row">
-              <i className="fc-lg is-open" /> Open, listed at that price
+              <i className="fc-lg is-other" /> Booked by another guest
             </span>
             <span className="fc-legend-row">
-              <i className="fc-lg is-other" /> Booked by another guest
+              <i className="fc-lg is-open" /> Open, listed at that price
             </span>
             <span className="fc-legend-row">
               <i className="fc-lg is-blocked" /> Blocked by you
