@@ -7,7 +7,7 @@ import { phaseOf } from '../lib/derive'
 import { Info } from '../v2/components/Info'
 import { BookingStateSwitcher, type DemoState } from '../v2/components/BookingStateSwitcher'
 import { Assumptions } from '../components/Assumptions'
-import { InteractiveCalendar } from './InteractiveCalendar'
+import { CalendarLegend, InteractiveCalendar } from './InteractiveCalendar'
 import '../v2/v2.css'
 import '../v3/v3.css'
 import './final.css'
@@ -336,10 +336,16 @@ function GuestBookingInfo({ ds, booking }: { ds: Dataset; booking: Booking }) {
       <InteractiveCalendar ds={ds} booking={booking} />
 
       <div className="fin-acc">
-        <button className="fin-acc-btn" aria-expanded={open} aria-controls="gpb" onClick={() => setOpen((v) => !v)}>
-          <span>Guest price breakdown</span>
-          <ChevronDown size={18} className={`chev ${open ? 'is-open' : ''}`} aria-hidden />
-        </button>
+        <div className="fin-acc-row">
+          <button className="fin-acc-btn" aria-expanded={open} aria-controls="gpb" onClick={() => setOpen((v) => !v)}>
+            <span>Guest price breakdown</span>
+            <ChevronDown size={18} className={`chev ${open ? 'is-open' : ''}`} aria-hidden />
+          </button>
+          <span className="fin-legend">
+            <span className="fin-legend-label">What the colors mean</span>
+            <CalendarLegend />
+          </span>
+        </div>
         {open ? (
           <div id="gpb" className="fin-acc-body">
             <dl className="fin-ledger fin-ledger-sm">

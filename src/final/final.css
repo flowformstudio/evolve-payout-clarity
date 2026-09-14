@@ -1127,3 +1127,59 @@
   font-size: 10px;
   font-weight: 400;
 }
+
+/* legend lives on the accordion row, far right */
+.fin .fin-acc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.fin .fin-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink-3);
+}
+.fin .fin-legend .info-pop {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: calc(100% + 8px);
+}
+/* other guests: very light green, no outline */
+.fin .fc-day.is-other {
+  background: var(--green-bg);
+  border-color: transparent;
+}
+.fin .fc-day.is-other:hover,
+.fin .fc-day.is-other.is-active {
+  background: #c9e6d5;
+  border-color: transparent;
+}
+.fin .fc-day.is-other .fc-num {
+  color: var(--green);
+}
+.fin .fc-day.is-other .fc-rate {
+  color: var(--ink);
+}
+.fin .fc-lg.is-other {
+  background: var(--green-bg);
+  border-color: transparent;
+}
+.fin .fc-lg.is-today {
+  box-shadow: none;
+  background: transparent;
+  position: relative;
+}
+.fin .fc-lg.is-today::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+}
