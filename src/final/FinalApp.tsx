@@ -288,13 +288,6 @@ function PayoutBreakdown({ ds, booking }: { ds: Dataset; booking: Booking }) {
           <dt>
             <span className="fin-fee-label">
               Evolve management fee <span className="fin-dim">({ratePct}% of stay revenue)</span>
-              <Info label="About the management fee">
-                Your {ds.owner.plan} plan management fee is {ratePct}% of stay revenue only. The cleaning fee passes through to you in full. Taxes are never charged a fee.
-                <br />
-                <span className="info-math">
-                  {ratePct}% × {money(base)} = {money(canceled ? base * ds.listing.managementFeeRate : fee)}
-                </span>
-              </Info>
             </span>
             <small>Service fee for management and support</small>
           </dt>

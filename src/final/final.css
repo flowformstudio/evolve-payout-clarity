@@ -811,3 +811,121 @@
     margin-left: 82px;
   }
 }
+
+/* ---------- calendar, minimal white restyle ---------- */
+.fin .fc {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+.fin .fc-head {
+  margin-bottom: 14px;
+}
+.fin .fc-month {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.fin .fc-navbtn {
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+.fin .fc-grid {
+  gap: 4px 4px;
+}
+.fin .fc-dow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding-bottom: 8px;
+}
+.fin .fc-day {
+  min-height: 56px;
+  padding: 8px 2px 7px;
+  border-radius: 8px;
+  background: var(--paper);
+  border: 1px solid transparent;
+}
+.fin .fc-num {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.fin .fc-rate {
+  font-size: 12px;
+  color: var(--ink-2);
+}
+/* open: white tile, hairline border */
+.fin .fc-day:not(.is-booked):not(.is-other):not(.is-blocked) {
+  border-color: var(--line);
+}
+/* other guests: no tile, receded text */
+.fin .fc-day.is-other {
+  background: transparent;
+}
+.fin .fc-day.is-other .fc-num {
+  color: #b3b6bc;
+  font-weight: 500;
+}
+.fin .fc-day.is-other .fc-rate {
+  color: #b3b6bc;
+}
+/* blocked by you: red tint */
+.fin .fc-day.is-blocked {
+  background: var(--red-bg);
+}
+.fin .fc-day.is-blocked .fc-num {
+  color: var(--red);
+}
+.fin .fc-day.is-blocked .fc-rate {
+  color: #b4605c;
+}
+/* this booking: solid green band */
+.fin .fc-day.is-booked {
+  background: var(--green);
+  border-color: var(--green);
+  box-shadow: none;
+}
+.fin .fc-day.is-start {
+  border-radius: 8px 0 0 8px;
+}
+.fin .fc-day.is-end {
+  border-radius: 0 8px 8px 0;
+}
+.fin .fc-day.is-booked:not(.is-start):not(.is-end) {
+  border-radius: 0;
+}
+.fin .fc-day.is-booked + .fc-day.is-booked {
+  border-left-color: rgba(255, 255, 255, 0.35);
+}
+.fin .fc-day:hover,
+.fin .fc-day.is-active {
+  background: #f3f2ee;
+  border-color: var(--line-2);
+}
+.fin .fc-day.is-other:hover,
+.fin .fc-day.is-other.is-active {
+  background: #f3f2ee;
+  border-color: var(--line-2);
+}
+.fin .fc-day.is-blocked:hover,
+.fin .fc-day.is-blocked.is-active {
+  background: #f6dcda;
+}
+.fin .fc-day.is-booked:hover,
+.fin .fc-day.is-booked.is-active {
+  background: #14563b;
+  border-color: #14563b;
+  box-shadow: none;
+}
+.fin .fc-day.is-pinned {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--ink);
+}
+.fin .fc-day.is-today {
+  box-shadow: inset 0 0 0 2px var(--amber);
+}
+.fin .fc-day.is-today.is-booked {
+  box-shadow: inset 0 0 0 2px var(--amber), inset 0 0 0 4px var(--green);
+}
